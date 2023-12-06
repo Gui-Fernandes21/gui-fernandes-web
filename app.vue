@@ -1,22 +1,21 @@
 <template>
-  <div>
-    
-  </div>
+	<div>
+		<LayoutButton :outline="true">CONTACT ME</LayoutButton>
+
+    <InfoCard></InfoCard>
+	</div>
 </template>
 
 <style>
-:root {
-  --dark: #1F1F21;
-  --gray-900: #484848;
-  --gray-700: #727272;
-  --gray-500: #B1B1B1;
-  --gray-300: #D1D1D1;
-  --gray-100: #EDEDED;
-  --primary: #2AEA8C;
-  --primary-dark: #10B967;
-  --primary-light: #5DFCAE;
-}
+@import 'normalize.css';
 html {
-  background: var(--dark);
+	background: var(--dark);
+}
+.nuxt-icon svg {
+	/* width: 3em; */
+	/* height: 3em; */
+	font-size: 1.3rem;
+  margin-bottom: 0.125em;
+	vertical-align: middle;
 }
 </style>
