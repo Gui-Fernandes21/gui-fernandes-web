@@ -92,9 +92,10 @@ img {
 	height: 527px;
 	overflow: hidden;
 	border-radius: 60px;
-	box-shadow: 0px 0px 9.3px 1px rgba(171, 171, 171, 0.25);
+	box-shadow: 0px 0px 10.3px -4.446px rgba(171, 171, 171, 0.3),
+		0px 0px 12.6px 0px rgba(0, 0, 0, 0.25) inset;
 	background: var(--dark);
-	margin: 1rem;
+	margin: 2rem 1rem;
 }
 .description-role {
 	width: 4rem;
@@ -141,6 +142,9 @@ img {
 	align-items: center;
 	gap: 22px;
 	margin: 1rem auto;
+}
+.social-buttons svg {
+	cursor: pointer;
 }
 .action {
 	display: flex;

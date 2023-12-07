@@ -1,8 +1,8 @@
 <template>
-	<div>
+	<div class="layout">
     <InfoCard></InfoCard>
 		<div class="content"></div>
-		<div class="nav"></div>
+		<TheNav></TheNav>
 	</div>
 </template>
 
@@ -18,5 +18,12 @@ html {
 	font-size: 1.3rem;
   margin-bottom: 0;
 	vertical-align: middle;
+}
+</style>
+
+<style scoped>
+.layout {
+	display: flex;
+	justify-content: space-between;
 }
 </style>
