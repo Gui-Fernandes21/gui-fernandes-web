@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<LayoutButton :outline="true">CONTACT ME</LayoutButton>
-
     <InfoCard></InfoCard>
+		<div class="content"></div>
+		<div class="nav"></div>
 	</div>
 </template>
 
@@ -14,8 +14,9 @@ html {
 .nuxt-icon svg {
 	/* width: 3em; */
 	/* height: 3em; */
+  /* margin-bottom: 0.125em; */
 	font-size: 1.3rem;
-  margin-bottom: 0.125em;
+  margin-bottom: 0;
 	vertical-align: middle;
 }
 </style>

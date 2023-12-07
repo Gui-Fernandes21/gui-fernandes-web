@@ -31,7 +31,7 @@ export default {
 	display: flex;
 	width: 6rem;
 	overflow: hidden;
-	padding: 10px 41px;
+	padding: 7px 41px;
 	border-radius: 12px;
 	/* background: var(--primary); */
 	justify-content: center;
