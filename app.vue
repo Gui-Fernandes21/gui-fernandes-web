@@ -1,7 +1,7 @@
 <template>
 	<div class="layout">
     <InfoCard></InfoCard>
-		<div class="content"></div>
+		<TheContent></TheContent>
 		<TheNav></TheNav>
 	</div>
 </template>

@@ -24,6 +24,7 @@ section {
 	height: calc(100dvh - 2rem);
   margin-top: 2rem;
   margin-right: 2rem;
+  /* margin: 2rem 2rem 0; */
 }
 .burger-menu {
 	display: flex;
