@@ -18,7 +18,7 @@
 
 		<header>
 			<h1 class="heading-0">
-				Hello, I'm <span class="primary-text">Gui!</span> I'm a
+				Hello, my name is <span class="primary-text">Gui!</span> I'm a
 				<span class="primary-text">Web</span> Developer
 			</h1>
 			<span class="body-text">
@@ -38,6 +38,19 @@
 				<div class="arrow-container">
 					<div class="left" :class="activeClass"></div>
 					<div class="right" :class="activeClass"></div>
+				</div>
+			</div>
+		</div>
+
+		<div class="statistics-wrapper">
+			<div class="statistics">
+				<div class="experience">
+					<h1>3+</h1>
+					<span class="body-text">Years of Experience</span>
+				</div>
+				<div class="projects">
+					<h1>4+</h1>
+					<span class="body-text">Personal Projects</span>
 				</div>
 			</div>
 		</div>
@@ -77,11 +90,18 @@ header > h1 {
 header > span {
 	color: var(--gray-300);
 }
+.statistics-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	/* background-color: rgba(127, 255, 212, 0.111); */
+}
 .wrapper {
 	margin: 3rem 0;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	/* background-color: rgba(127, 255, 212, 0.111); */
 }
 .about-me-prompt {
 	display: flex;
@@ -91,11 +111,14 @@ header > span {
 	border-radius: 15px;
 	padding: 1rem 2rem 3.5rem;
 	cursor: pointer;
+  user-select: none;
+  transition: all 200ms ease-in-out;
 }
 .about-me-prompt > h3 {
 	font-family: "Montserrat", sans-serif;
 	color: var(--gray-700);
 	text-align: center;
+  transition: all 200ms ease-in-out;
 }
 .arrow-container {
 	display: flex;
@@ -110,6 +133,7 @@ header > span {
 	position: absolute;
 	border-radius: 33px;
 	margin: auto;
+  transition: all 200ms ease-in-out;
 }
 .left {
 	transform: translateX(-10px) translateY(10px) rotate(45deg);
@@ -129,5 +153,20 @@ header > span {
 .about-me-prompt.active {
 	color: var(--primary);
 	border: 1px solid var(--primary);
+}
+.statistics {
+  display: flex;
+  gap: 2rem;
+  margin: auto 2rem;
+}
+.statistics h1 {
+	color: var(--primary);
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 72px;
+	font-weight: 700;
+  margin: 0;
+}
+.statistics span {
+  color: var(--gray-300);
 }
 </style>

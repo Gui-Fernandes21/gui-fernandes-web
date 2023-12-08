@@ -1,7 +1,7 @@
 /* Import Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,400;0,5..1200,500;0,5..1200,600;0,5..1200,700;0,5..1200,800;0,5..1200,900;1,5..1200,400;1,5..1200,500;1,5..1200,600;1,5..1200,700;1,5..1200,800;1,5..1200,900");
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
 
 /* Global Variables */
 :root {
@@ -74,5 +74,5 @@
 /* Text Styles Color */
 
 .primary-text {
-  color: var(--primary);
+	color: var(--primary);
 }
