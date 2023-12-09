@@ -31,14 +31,12 @@
 	height: calc(100dvh - 2rem);
 	margin-top: 2rem;
 	margin-right: 2rem;
-	/* margin: 2rem 2rem 0; */
 }
 .burger-menu {
 	display: flex;
 	width: 49px;
 	height: 49px;
 	overflow: hidden;
-	/* padding: 4px 18px; */
 	border-radius: 33px;
 	border: 1px solid var(--gray-900);
 	justify-content: center;
