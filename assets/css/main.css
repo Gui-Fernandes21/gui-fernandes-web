@@ -16,6 +16,27 @@
 	--primary-light: #5dfcae;
 }
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	padding: 20px;
+	border-radius: 20px;
+  background: #131313;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+
 /* Text Styles */
 .heading-0 {
 	color: #fff;
