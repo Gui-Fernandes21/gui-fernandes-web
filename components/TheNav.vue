@@ -1,30 +1,37 @@
 <template>
-	<section>
-		<div class="burger-menu">
-			<div class="line1"></div>
-			<div class="line2"></div>
-			<div class="line3"></div>
-		</div>
-		<div class="floating-nav">
-      <nuxt-icon name="house" filled></nuxt-icon>
-      <nuxt-icon name="person" filled></nuxt-icon>
-      <nuxt-icon name="work" filled></nuxt-icon>
-      <nuxt-icon name="study" filled></nuxt-icon>
-      <nuxt-icon name="skills" filled></nuxt-icon>
-      <nuxt-icon name="projects" filled></nuxt-icon>
-    </div>
+	<section class="nav-wrapper">
+		<section class="nav">
+			<div class="burger-menu">
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<div class="floating-nav">
+				<nuxt-icon name="house" filled></nuxt-icon>
+				<nuxt-icon name="person" filled></nuxt-icon>
+				<nuxt-icon name="work" filled></nuxt-icon>
+				<nuxt-icon name="study" filled></nuxt-icon>
+				<nuxt-icon name="skills" filled></nuxt-icon>
+				<nuxt-icon name="projects" filled></nuxt-icon>
+			</div>
+		</section>
 	</section>
 </template>
 
 <style scoped>
-section {
+.nav-wrapper {
+  width: 5rem;
+  display: flex;
+}
+.nav {
 	display: flex;
+  position: fixed;
 	flex-direction: column;
 	align-items: center;
 	height: calc(100dvh - 2rem);
-  margin-top: 2rem;
-  margin-right: 2rem;
-  /* margin: 2rem 2rem 0; */
+	margin-top: 2rem;
+	margin-right: 2rem;
+	/* margin: 2rem 2rem 0; */
 }
 .burger-menu {
 	display: flex;
@@ -40,15 +47,15 @@ section {
 	gap: 5px 21px;
 	flex-shrink: 0;
 	flex-wrap: wrap;
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 .line1,
 .line2,
 .line3 {
 	width: 21px;
 	height: 2px;
-  border-radius: 2px;
-  background: var(--gray-900);
+	border-radius: 2px;
+	background: var(--gray-900);
 	flex-shrink: 0;
 }
 .floating-nav {
