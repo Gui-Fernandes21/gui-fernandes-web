@@ -14,5 +14,10 @@
     "nuxt": "^3.8.2",
     "vue": "^3.3.10",
     "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@nuxtjs/svg-sprite": "^1.0.2",
+    "normalize.css": "^8.0.1",
+    "nuxt-icons": "^3.2.1"
   }
 }

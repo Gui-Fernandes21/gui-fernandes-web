@@ -1,0 +1,99 @@
+/* Import Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,400;0,5..1200,500;0,5..1200,600;0,5..1200,700;0,5..1200,800;0,5..1200,900;1,5..1200,400;1,5..1200,500;1,5..1200,600;1,5..1200,700;1,5..1200,800;1,5..1200,900");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+
+/* Global Variables */
+:root {
+	--dark: #1f1f21;
+	--gray-900: #484848;
+	--gray-700: #727272;
+	--gray-500: #b1b1b1;
+	--gray-300: #d1d1d1;
+	--gray-100: #ededed;
+	--primary: #2aea8c;
+	--primary-dark: #10b967;
+	--primary-light: #5dfcae;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	padding: 20px;
+	border-radius: 20px;
+  background: #131313;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+
+/* Text Styles */
+.heading-0 {
+	color: #fff;
+	font-family: "Playfair", serif;
+	font-size: 72px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.heading-1 {
+	color: #fff;
+	font-family: "Playfair", serif;
+	font-size: 48px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.heading-2 {
+	color: #fff;
+	font-family: "Playfair", serif;
+	font-size: 32px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.heading-3 {
+	color: #fff;
+	font-family: "Playfair", serif;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.heading-4 {
+	color: #fff;
+	font-family: "Playfair", serif;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.body-text {
+	/* Body */
+	font-family: "Source Sans 3", sans-serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 142%; /* 17.04px */
+}
+
+.bold {
+	font-weight: 700;
+}
+
+/* Text Styles Color */
+
+.primary-text {
+	color: var(--primary);
+}
