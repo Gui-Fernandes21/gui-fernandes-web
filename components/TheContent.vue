@@ -2,6 +2,8 @@
   <div class="content">
     <IntroSection></IntroSection>
     <AboutSection></AboutSection>
+    <ExperienceSection></ExperienceSection>
+    <EducationSection></EducationSection>
   </div>
 </template>
 
@@ -12,6 +14,6 @@
   flex-direction: column;
   justify-content: flex-start;
   margin: 2rem auto;
-  width: 90dvh;
+  width: 94dvh;
 }
 </style>
