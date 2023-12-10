@@ -3,4 +3,9 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ["nuxt-icons"],
 	css: ["~/assets/css/main.css"],
+  app: {
+    head: {
+      title: 'Gui Web Dev'
+    }
+  },
 });
