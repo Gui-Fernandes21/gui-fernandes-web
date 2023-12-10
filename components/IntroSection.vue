@@ -1,5 +1,5 @@
 <template>
-	<secttion class="intro">
+	<section class="intro">
 		<SectionToast>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@
 				</div>
 			</div>
 		</div>
-	</secttion>
+	</section>
 </template>
 
 <script>
