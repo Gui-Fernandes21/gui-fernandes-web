@@ -1,5 +1,5 @@
 <template>
-	<section class="intro">
+	<section class="intro-section">
 		<SectionToast>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -81,7 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.intro {
+.intro-section {
 	width: 100%;
 }
 header > h1 {
