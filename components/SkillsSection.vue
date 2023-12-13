@@ -55,7 +55,12 @@ export default {
 	align-items: center;
 	gap: 34px;
 	border-radius: 31px;
-	border: 1px solid var(--Gray-900, #484848);
+	transition: 250ms ease-in-out border;
+	border: 1px solid var(--gray-900);
+}
+.card-skill:hover {
+	border: 1px solid var(--primary);
+	color: var(--primary);
 }
 .card-skill > h3 {
 	font-family: "Source Sans 3", sans-serif;
@@ -73,4 +78,5 @@ export default {
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
 </style>
