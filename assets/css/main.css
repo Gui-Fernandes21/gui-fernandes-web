@@ -101,3 +101,16 @@
 .primary-text {
 	color: var(--primary);
 }
+
+
+/* Layout Section Global Styles */
+
+.section-wrapper {
+	margin-top: 5rem;
+}
+
+.content-wrapper {
+	display: flex;
+	margin-top: 2rem;
+	gap: 10px;
+}

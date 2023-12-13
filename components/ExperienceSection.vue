@@ -1,5 +1,5 @@
 <template>
-	<div class="experience-section">
+	<div id="experience" class="section-wrapper">
 		<SectionToast>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -104,15 +104,6 @@
 </template>
 
 <style scoped>
-.experience-section {
-	margin-top: 5rem;
-}
-
-.content-wrapper {
-	display: flex;
-	margin-top: 2rem;
-	gap: 10px;
-}
 header > span {
 	color: var(--gray-500);
 }

@@ -1,5 +1,5 @@
 <template>
-	<div class="education-section">
+	<div id="education" class="section-wrapper">
 		<SectionToast>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +51,26 @@
 							Instituto Metropole Digital, <span class="italic">Brazil</span> —
 							<span class="primary-text italic">Web Developer Bootcamp</span>
 						</h1>
-						<span class="body-text italic">March 2020 - April 2022</span>
+						<!-- <span class="body-text italic">January 2020 - July 2020</span> -->
 					</header>
+          <p class="body-text">
+            - Structured Programming.
+          </p>
+          <p class="body-text">
+            - Object-Oriented Programming.
+          </p>
+          <p class="body-text">
+            - Database Concepts.
+          </p>
+          <p class="body-text">
+            - Web Authoring (JS, JQuery, HTML, CSS).
+          </p>
+          <p class="body-text">
+            - Web development.
+          </p>
+          <p class="body-text">
+            - Web Development II.
+          </p>
         </div>
       </div>
 		</div>
@@ -61,14 +79,6 @@
 
 
 <style scoped>
-.education-section {
-  margin-top: 5rem;
-}
-.content-wrapper {
-	display: flex;
-	margin-top: 2rem;
-	gap: 10px;
-}
 header > span {
 	color: var(--gray-500);
 }
@@ -78,9 +88,10 @@ header h1 {
 .content {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	gap: 3rem;
 }
 .content p {
 	color: var(--gray-500);
+  margin: 5px 0;
 }
 </style>
