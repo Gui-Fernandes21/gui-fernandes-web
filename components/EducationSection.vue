@@ -1,5 +1,5 @@
 <template>
-	<div class="education-section">
+	<div id="education" class="section-wrapper">
 		<SectionToast>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -54,9 +54,6 @@
 						<!-- <span class="body-text italic">January 2020 - July 2020</span> -->
 					</header>
           <p class="body-text">
-            - Performance Base Admission.
-          </p>
-          <p class="body-text">
             - Structured Programming.
           </p>
           <p class="body-text">
@@ -82,14 +79,6 @@
 
 
 <style scoped>
-.education-section {
-  margin-top: 5rem;
-}
-.content-wrapper {
-	display: flex;
-	margin-top: 2rem;
-	gap: 10px;
-}
 header > span {
 	color: var(--gray-500);
 }

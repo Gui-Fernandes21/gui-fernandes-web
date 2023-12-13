@@ -1,5 +1,5 @@
 <template>
-	<section class="about-section">
+	<section id="about" class="section-wrapper">
 		<SectionToast>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
