@@ -13,6 +13,7 @@
 				<nuxt-icon name="study" filled></nuxt-icon>
 				<nuxt-icon name="skills" filled></nuxt-icon>
 				<nuxt-icon name="projects" filled></nuxt-icon>
+				<nuxt-icon class="icon" name="contact" filled></nuxt-icon>
 			</div>
 		</section>
 	</section>
@@ -68,5 +69,8 @@
 	justify-content: space-between;
 	align-items: center;
 	flex-shrink: 0;
+}
+.icon :deep(svg > path) {
+	fill: var(--gray-900);
 }
 </style>
