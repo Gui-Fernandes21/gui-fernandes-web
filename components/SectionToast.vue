@@ -19,7 +19,7 @@ section {
 	align-content: center;
 	flex-wrap: wrap;
 	gap: 8px;
-	border: 1px solid var(--Gray-900, #484848);
+	border: 1px solid var(--gray-900);
 	border-radius: 33px;
 	color: var(--gray-500);
 }

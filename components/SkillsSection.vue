@@ -57,6 +57,7 @@ export default {
 	border-radius: 31px;
 	transition: 250ms ease-in-out border;
 	border: 1px solid var(--gray-900);
+	user-select: none;
 }
 .card-skill:hover {
 	border: 1px solid var(--primary);
