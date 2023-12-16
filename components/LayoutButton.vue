@@ -31,12 +31,11 @@ export default {
 	display: flex;
 	width: 6rem;
 	overflow: hidden;
-	padding: 7px 41px;
+	padding: 5px 41px;
 	border-radius: 12px;
 	/* background: var(--primary); */
 	justify-content: center;
 	align-items: center;
-	gap: 18px;
 }
 
 .filled {

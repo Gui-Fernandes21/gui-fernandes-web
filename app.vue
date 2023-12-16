@@ -10,6 +10,8 @@
 @import 'normalize.css';
 html {
 	background: var(--dark);
+	scroll-behavior: smooth;
+	scroll-padding-top: 5rem;
 }
 .nuxt-icon svg {
 	/* width: 3em; */
