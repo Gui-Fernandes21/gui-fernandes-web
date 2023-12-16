@@ -1,32 +1,46 @@
 <template>
 	<section class="nav-wrapper">
 		<section class="nav">
-			<div class="burger-menu">
+			<!-- <div class="burger-menu">
 				<div class="line1"></div>
 				<div class="line2"></div>
 				<div class="line3"></div>
-			</div>
+			</div> -->
 			<div class="floating-nav">
-				<nuxt-icon name="house" filled></nuxt-icon>
-				<nuxt-icon name="person" filled></nuxt-icon>
-				<nuxt-icon name="work" filled></nuxt-icon>
-				<nuxt-icon name="study" filled></nuxt-icon>
-				<nuxt-icon name="skills" filled></nuxt-icon>
-				<nuxt-icon name="projects" filled></nuxt-icon>
-				<nuxt-icon class="icon" name="contact" filled></nuxt-icon>
+				<nuxt-icon @click="scroll('#intro')" class="icon" name="house" filled></nuxt-icon>
+				<nuxt-icon @click="scroll('#about')" class="icon" name="person" filled></nuxt-icon>
+				<nuxt-icon @click="scroll('#experience')" class="icon" name="work" filled></nuxt-icon>
+				<nuxt-icon @click="scroll('#education')" class="icon" name="study" filled></nuxt-icon>
+				<nuxt-icon @click="scroll('#skills')" class="icon skill" name="skills" filled></nuxt-icon>
+				<!-- <nuxt-icon @click="scroll('#projects')" class="icon" name="projects" filled></nuxt-icon> -->
+				<nuxt-icon @click="scroll('#contact')" class="icon" name="contact" filled></nuxt-icon>
 			</div>
 		</section>
 	</section>
 </template>
 
+<script>
+import { mapActions } from "pinia";
+import { useScrollStore } from "~/store";
+
+export default {
+	methods: {
+		...mapActions(useScrollStore, ['scroll']),
+	},
+	beforeMount() {
+		this.scroll('about')
+	}
+};
+</script>
+
 <style scoped>
 .nav-wrapper {
-  width: 5rem;
-  display: flex;
+	width: 5rem;
+	display: flex;
 }
 .nav {
 	display: flex;
-  position: fixed;
+	position: fixed;
 	flex-direction: column;
 	align-items: center;
 	height: calc(100dvh - 2rem);
@@ -70,7 +84,17 @@
 	align-items: center;
 	flex-shrink: 0;
 }
-.icon :deep(svg > path) {
+.icon {
+	cursor: pointer;
+}
+.icon :deep(svg path) {
 	fill: var(--gray-900);
+	transition: all 200ms ease-in-out;
+}
+.skill:hover :deep(svg path) {
+	stroke: var(--primary);
+}
+.icon:hover :deep(svg path) {
+	fill: var(--primary);
 }
 </style>

@@ -1,18 +1,7 @@
 <template>
 	<section id="intro">
 		<SectionToast>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="13"
-				height="11"
-				viewBox="0 0 13 11"
-				fill="none"
-			>
-				<path
-					d="M5.2 11V7.11765H7.8V11H11.05V5.82353H13L6.5 0L0 5.82353H1.95V11H5.2Z"
-					fill="#B1B1B1"
-				/>
-			</svg>
+			<nuxt-icon class="icon" name="house" filled></nuxt-icon>
 			<span class="body-text bold">Intro</span>
 		</SectionToast>
 
@@ -33,6 +22,7 @@
 				:class="activeClass"
 				@mouseover="activate"
 				@mouseleave="deactivate"
+				@click="scrollAboutMe"
 			>
 				<h3 :class="activeClass">About me</h3>
 				<div class="arrow-container">
@@ -71,6 +61,10 @@ export default {
 		deactivate() {
 			this.isActive = false;
 		},
+		scrollAboutMe() {
+			const el = document.querySelector("#about");
+			if (el) el.scrollIntoView({ behavior: "smooth" });
+		},
 	},
 	computed: {
 		activeClass() {
@@ -81,6 +75,12 @@ export default {
 </script>
 
 <style scoped>
+.icon :deep(svg) {
+	font-size: 1rem;
+}
+.icon :deep(svg path) {
+	fill: var(--gray-500);
+}
 header > h1 {
 	margin: 1rem 0;
 }
@@ -108,14 +108,14 @@ header > span {
 	border-radius: 15px;
 	padding: 1rem 2rem 3.5rem;
 	cursor: pointer;
-  user-select: none;
-  transition: all 200ms ease-in-out;
+	user-select: none;
+	transition: all 200ms ease-in-out;
 }
 .about-me-prompt > h3 {
 	font-family: "Montserrat", sans-serif;
 	color: var(--gray-700);
 	text-align: center;
-  transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 .arrow-container {
 	display: flex;
@@ -130,7 +130,7 @@ header > span {
 	position: absolute;
 	border-radius: 33px;
 	margin: auto;
-  transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
 }
 .left {
 	transform: translateX(-10px) translateY(10px) rotate(45deg);
@@ -152,18 +152,18 @@ header > span {
 	border: 1px solid var(--primary);
 }
 .statistics {
-  display: flex;
-  gap: 2rem;
-  margin: auto 2rem;
+	display: flex;
+	gap: 2rem;
+	margin: auto 2rem;
 }
 .statistics h1 {
 	color: var(--primary);
 	font-family: "Source Sans 3", sans-serif;
 	font-size: 72px;
 	font-weight: 700;
-  margin: 0;
+	margin: 0;
 }
 .statistics span {
-  color: var(--gray-300);
+	color: var(--gray-300);
 }
 </style>

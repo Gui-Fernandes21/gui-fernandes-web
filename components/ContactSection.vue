@@ -90,7 +90,7 @@ form {
 .form-control > input,
 .form-control > textarea {
 	padding: 15px 10px;
-	background: var(--gray-900);
+	background: #4848487d;
 	border: none;
 	border-radius: 5px;
 	color: var(--gray-100);
