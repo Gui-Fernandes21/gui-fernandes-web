@@ -19,6 +19,7 @@
   "dependencies": {
     "@nuxtjs/svg-sprite": "^1.0.2",
     "@pinia/nuxt": "^0.5.1",
+    "firebase-functions": "^4.5.0",
     "normalize.css": "^8.0.1",
     "nuxt-icons": "^3.2.1",
     "pinia": "^2.1.7"

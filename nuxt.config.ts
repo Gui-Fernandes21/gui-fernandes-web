@@ -11,4 +11,11 @@ export default defineNuxtConfig({
 			title: "Gui Web Dev",
 		},
 	},
+	nitro: {
+		preset: 'firebase',
+    firebase: {
+      gen: 2,
+			nodeVersion: '18'
+    }
+  }
 });
