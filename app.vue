@@ -4,6 +4,7 @@
 		<TheContent></TheContent>
 		<TheNav></TheNav>
 	</div>
+	<TheFooter></TheFooter>
 </template>
 
 <style>
