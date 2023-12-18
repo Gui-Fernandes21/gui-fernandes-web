@@ -16,7 +16,7 @@
 			</div>
 			<div class="info-section">
 				<div class="email">
-					<p>GuiFernandesPro@gmail.com</p>
+					<p class="body-text">GuiFernandesPro@gmail.com</p>
 				</div>
 				<div class="location">Orlando, Florida</div>
 				<div class="social-buttons">
@@ -128,11 +128,11 @@ img {
 }
 .email {
 	color: #fff;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 142%;
-	margin-bottom: 6px;
+	margin: .5rem;
+
+	p {
+		font-size: 11px;
+	}
 }
 .location {
 	color: #fff;
