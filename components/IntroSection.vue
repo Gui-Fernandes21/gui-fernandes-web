@@ -38,10 +38,10 @@
 					<h1>3+</h1>
 					<span class="body-text">Years of Experience</span>
 				</div>
-				<div class="projects">
+				<!-- <div class="projects">
 					<h1>4+</h1>
 					<span class="body-text">Personal Projects</span>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>
@@ -91,14 +91,12 @@ header > span {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-	/* background-color: rgba(127, 255, 212, 0.111); */
 }
 .wrapper {
 	margin: 3rem 0;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	/* background-color: rgba(127, 255, 212, 0.111); */
 }
 .about-me-prompt {
 	display: flex;
@@ -120,7 +118,6 @@ header > span {
 .arrow-container {
 	display: flex;
 	justify-content: space-around;
-	/* border: 1px solid var(--gray-300); */
 }
 .arrow-container > .left,
 .arrow-container > .right {
