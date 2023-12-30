@@ -163,4 +163,15 @@ header > span {
 .statistics span {
 	color: var(--gray-300);
 }
+
+@media only screen and (max-width: 600px) {
+	#intro {
+		width: 90vw;
+		margin: auto;
+	}
+	header > span {
+		width: 55%;
+		display: block;
+	}
+}
 </style>

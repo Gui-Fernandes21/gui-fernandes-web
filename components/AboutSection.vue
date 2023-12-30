@@ -40,13 +40,19 @@
 }
 .about-wrapper {
 	text-align: center;
+	width: 80%;
+	margin: auto;
 }
 .about-wrapper h1 {
 	margin: 1rem 0;
 }
 .about-wrapper p {
-	width: 436px;
 	margin: 0 auto;
 	color: var(--gray-300);
+}
+@media only screen and (max-width: 600px) {
+	.about-wrapper {
+		width: 90vw;
+	}
 }
 </style>

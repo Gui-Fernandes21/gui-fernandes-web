@@ -77,8 +77,6 @@
 
 <style scoped>
 header {
-	/* background-color: #7fffd44e; */
-	/* user-select: none; */
 	display: flex;
 	justify-content: space-between;
 	margin: 1.1rem 2rem;
@@ -115,8 +113,6 @@ img {
 	line-height: normal;
 }
 .img-wrapper {
-	/* padding: 1rem; */
-	/* background-color: #7fffd44e; */
 	text-align: center;
 }
 .info-section {
@@ -142,7 +138,6 @@ img {
 	line-height: 142%;
 }
 .social-buttons {
-	/* background-color: #7fffd44e; */
 	display: flex;
 	width: 116px;
 	justify-content: center;
@@ -157,4 +152,12 @@ img {
 	display: flex;
 	justify-content: center;
 }
+
+@media only screen and (max-width: 600px) {
+  .card {
+		position: relative;
+	}
+	
+}
+
 </style>

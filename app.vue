@@ -1,6 +1,6 @@
 <template>
 	<div class="layout">
-    <InfoCard></InfoCard>
+		<InfoCard></InfoCard>
 		<TheContent></TheContent>
 		<TheNav></TheNav>
 	</div>
@@ -8,18 +8,15 @@
 </template>
 
 <style>
-@import 'normalize.css';
+@import "normalize.css";
 html {
 	background: var(--dark);
 	scroll-behavior: smooth;
 	scroll-padding-top: 5rem;
 }
 .nuxt-icon svg {
-	/* width: 3em; */
-	/* height: 3em; */
-  /* margin-bottom: 0.125em; */
 	font-size: 1.3rem;
-  margin-bottom: 0;
+	margin-bottom: 0;
 	vertical-align: middle;
 }
 </style>
@@ -28,5 +25,7 @@ html {
 .layout {
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
+	overflow-x: hidden;
 }
 </style>

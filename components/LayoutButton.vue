@@ -47,4 +47,15 @@ export default {
 	background: transparent;
 	border: 2px solid var(--primary);
 }
+
+.outlined:hover, .outlined:focus {
+	background: var(--primary);
+	color: var(--dark);
+}
+
+.filled:hover, .filled:focus {
+  color: var(--primary);
+	background: transparent;
+	border: 2px solid var(--primary);
+}
 </style>
