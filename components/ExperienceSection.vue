@@ -16,7 +16,7 @@
 			<span class="body-text bold">Experience</span>
 		</SectionToast>
 		<div class="content-wrapper">
-			<div class="svg-wrapper">
+			<!-- <div class="svg-wrapper">
 				<svg
 					width="16"
 					height="500"
@@ -33,9 +33,10 @@
 					<circle cx="8" cy="14" r="8" fill="#2AEA8C" />
 					<circle cx="8" cy="322" r="8" fill="#2AEA8C" />
 				</svg>
-			</div>
+			</div> -->
 			<div class="content">
 				<div class="cxp-experience">
+					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">
 							CXP Brasil Consulting, <span class="italic">Brazil</span> —
@@ -63,6 +64,7 @@
 				</div>
 
 				<div class="sparks-experience">
+					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">
 							SparkSignals, <span class="italic">USA </span> —
@@ -113,9 +115,28 @@ header h1 {
 .content {
 	display: flex;
 	flex-direction: column;
-	gap: 4rem;
+	width: 100vw;
 }
 .content p {
 	color: var(--gray-500);
 }
+
+.cxp-experience,
+.sparks-experience {
+	border-left: 3px solid gray;
+	padding-left: 2rem;
+	padding-bottom: 1.5rem;
+	padding-top: 0;
+	position: relative;
+}
+.dot {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: var(--primary);
+	top: 6px;
+	left: -8px;
+}
+
 </style>

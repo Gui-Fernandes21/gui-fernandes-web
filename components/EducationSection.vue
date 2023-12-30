@@ -17,7 +17,7 @@
 		</SectionToast>
 
 		<div class="content-wrapper">
-			<svg
+			<!-- <svg
 				width="16"
 				height="293"
 				viewBox="0 0 16 293"
@@ -32,51 +32,40 @@
 				/>
 				<circle cx="8" cy="8" r="8" fill="#2AEA8C" />
 				<circle cx="8" cy="119" r="8" fill="#2AEA8C" />
-			</svg>
-      <div class="content">
-        <div class="uol-education">
-          <header>
+			</svg> -->
+			<div class="content">
+				<div class="uol-education">
+					<div class="dot"></div>
+					<header>
 						<h1 class="heading-3 bold">
 							University of London, <span class="italic">UK</span> —
 							<span class="primary-text italic">BSc Computer Science</span>
 						</h1>
 					</header>
-          <p class="body-text">
-            <span class="primary-text">Performance</span> Base Admission
-          </p>
-        </div>
-        <div class="imd-education">
-          <header>
+					<p class="body-text">
+						<span class="primary-text">Performance</span> Base Admission
+					</p>
+				</div>
+				<div class="imd-education">
+					<div class="dot"></div>
+					<header>
 						<h1 class="heading-3 bold">
 							Instituto Metropole Digital, <span class="italic">Brazil</span> —
 							<span class="primary-text italic">Web Developer Bootcamp</span>
 						</h1>
 						<!-- <span class="body-text italic">January 2020 - July 2020</span> -->
 					</header>
-          <p class="body-text">
-            - Structured Programming.
-          </p>
-          <p class="body-text">
-            - Object-Oriented Programming.
-          </p>
-          <p class="body-text">
-            - Database Concepts.
-          </p>
-          <p class="body-text">
-            - Web Authoring (JS, JQuery, HTML, CSS).
-          </p>
-          <p class="body-text">
-            - Web development.
-          </p>
-          <p class="body-text">
-            - Web Development II.
-          </p>
-        </div>
-      </div>
+					<p class="body-text">- Structured Programming.</p>
+					<p class="body-text">- Object-Oriented Programming.</p>
+					<p class="body-text">- Database Concepts.</p>
+					<p class="body-text">- Web Authoring (JS, JQuery, HTML, CSS).</p>
+					<p class="body-text">- Web development.</p>
+					<p class="body-text">- Web Development II.</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
-
 
 <style scoped>
 header > span {
@@ -88,10 +77,26 @@ header h1 {
 .content {
 	display: flex;
 	flex-direction: column;
-	gap: 3rem;
 }
 .content p {
 	color: var(--gray-500);
-  margin: 5px 0;
+	margin: 5px 0;
+}
+.uol-education,
+.imd-education {
+	border-left: 3px solid gray;
+	padding-left: 2rem;
+	padding-bottom: 1.5rem;
+	padding-top: 0;
+	position: relative;
+}
+.dot {
+	position: absolute;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: var(--primary);
+	top: 6px;
+	left: -8px;
 }
 </style>

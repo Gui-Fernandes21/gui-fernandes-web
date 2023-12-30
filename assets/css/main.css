@@ -19,7 +19,7 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: transparent;
+	background: transparent;
 }
 
 /* width */
@@ -31,11 +31,11 @@
 ::-webkit-scrollbar-thumb {
 	padding: 20px;
 	border-radius: 20px;
-  background: #131313;
+	background: #131313;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #181818;
+	background: #181818;
 }
 
 /* Text Styles */
@@ -103,7 +103,6 @@
 	color: var(--primary);
 }
 
-
 /* Layout Section Global Styles */
 
 .section-wrapper {
@@ -114,4 +113,37 @@
 	display: flex;
 	margin-top: 2rem;
 	gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+	/* Mobile Fonts */
+	.heading-0 {
+		font-size: 48px;
+	}
+	.heading-1 {
+		font-size: 32px;
+	}
+	.heading-2 {
+		font-size: 24px;
+	}
+	.heading-3 {
+		font-size: 18px;
+	}
+	.heading-4 {
+		font-size: 16px;
+	}
+
+	.section-wrapper {
+		width: 100vw;
+	}
+
+	.content-wrapper {
+		width: 90vw;
+	}
+
+	.section-wrapper {
+		width: 90vw;
+		margin: auto;
+		margin-top: 5rem;
+	}
 }

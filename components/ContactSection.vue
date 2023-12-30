@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="form-control">
+					<div class="form-control textArea">
 						<label class="body-text" for="message">Message</label>
 						<textarea
 							name="message"
@@ -57,49 +57,56 @@
 header {
 	text-align: center;
 }
+header > h4 {
+	font-size: 12px;
+}
 .icon :deep(svg) {
 	font-size: 1rem;
 }
 .content-wrapper {
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
 form {
-	margin-top: 1rem;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	gap: 10px;
+
 	align-items: center;
-	gap: 5px;
+	margin-top: 1rem;
 }
 .row {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 8px;
+	flex-wrap: wrap;
+	gap: 10px;
+	
 	width: 100%;
 }
 .form-control {
-	width: 100%;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-evenly;
 }
 .form-control > input,
 .form-control > textarea {
-	padding: 15px 10px;
 	background: #4848487d;
 	border: none;
 	border-radius: 5px;
 	color: var(--gray-100);
 	font-family: "Source Sans 3", sans-serif;
+	padding: 10px 12px;
 }
 .form-control > label {
 	color: var(--gray-100);
+	margin-bottom: 4px;
 }
-
+.textArea {
+	width: 100%;
+}
 .row.action {
 	justify-content: flex-start;
 	margin-top: 1rem;
@@ -111,5 +118,14 @@ form {
 	padding: 14px 25px;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	form {
+		width: 90vw;
+	}
+	.form-control {
+		width: 100%;
+	}
 }
 </style>
