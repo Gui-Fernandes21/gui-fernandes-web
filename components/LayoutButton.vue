@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
 .button-wrapper {
-  cursor: pointer;
+	cursor: pointer;
 	display: flex;
 	width: 6rem;
 	overflow: hidden;
@@ -43,19 +43,27 @@ export default {
 }
 
 .outlined {
-  color: var(--primary);
+	color: var(--primary);
 	background: transparent;
 	border: 2px solid var(--primary);
 }
 
-.outlined:hover, .outlined:focus {
-	background: var(--primary);
-	color: var(--dark);
-}
-
-.filled:hover, .filled:focus {
-  color: var(--primary);
-	background: transparent;
-	border: 2px solid var(--primary);
+@media(hover: hover)  {
+	
+	.outlined:hover,
+	.outlined:focus,
+	.outlined:active {
+		background: var(--primary);
+		color: var(--dark);
+	}
+	
+	.filled:hover,
+	.filled:focus,
+	.filled:active {
+		color: var(--primary);
+		background: transparent;
+		border: 2px solid var(--primary);
+	}
+	
 }
 </style>

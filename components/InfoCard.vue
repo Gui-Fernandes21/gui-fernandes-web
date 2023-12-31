@@ -68,12 +68,24 @@
 					</div>
 				</div>
 				<div class="action">
-					<LayoutButton outline>CONTACT ME</LayoutButton>
+					<LayoutButton outline @click="scroll('#contact')"
+						>CONTACT ME</LayoutButton
+					>
 				</div>
 			</div>
 		</div>
 	</section>
 </template>
+
+<script>
+import { mapActions } from "pinia";
+import { useScrollStore } from "~/store";
+export default {
+	methods: {
+		...mapActions(useScrollStore, ["scroll"]),
+	},
+};
+</script>
 
 <style scoped>
 header {
@@ -124,7 +136,7 @@ img {
 }
 .email {
 	color: #fff;
-	margin: .5rem;
+	margin: 0.5rem;
 
 	p {
 		font-size: 11px;
@@ -154,10 +166,10 @@ img {
 }
 
 @media only screen and (max-width: 600px) {
-  .card {
+	.card {
 		position: relative;
+		width: 90vw;
+		margin: 2rem auto;
 	}
-	
 }
-
 </style>

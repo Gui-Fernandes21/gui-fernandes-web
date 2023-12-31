@@ -17,17 +17,11 @@
 		</header>
 
 		<div class="wrapper">
-			<div
-				class="about-me-prompt"
-				:class="activeClass"
-				@mouseover="activate"
-				@mouseleave="deactivate"
-				@click="scrollAboutMe"
-			>
-				<h3 :class="activeClass">About me</h3>
+			<div class="about-me-prompt" @click="scrollAboutMe">
+				<h3>About me</h3>
 				<div class="arrow-container">
-					<div class="left" :class="activeClass"></div>
-					<div class="right" :class="activeClass"></div>
+					<div class="left"></div>
+					<div class="right"></div>
 				</div>
 			</div>
 		</div>
@@ -55,20 +49,9 @@ export default {
 		};
 	},
 	methods: {
-		activate() {
-			this.isActive = true;
-		},
-		deactivate() {
-			this.isActive = false;
-		},
 		scrollAboutMe() {
 			const el = document.querySelector("#about");
 			if (el) el.scrollIntoView({ behavior: "smooth" });
-		},
-	},
-	computed: {
-		activeClass() {
-			return this.isActive ? "active" : "";
 		},
 	},
 };
@@ -109,6 +92,18 @@ header > span {
 	user-select: none;
 	transition: all 200ms ease-in-out;
 }
+.about-me-prompt:hover {
+	border: 1px solid var(--primary);
+
+	h3 {
+		color: var(--primary);
+	}
+
+	.right,
+	.left {
+		background: var(--primary);
+	}
+}
 .about-me-prompt > h3 {
 	font-family: "Montserrat", sans-serif;
 	color: var(--gray-700);
@@ -132,21 +127,8 @@ header > span {
 .left {
 	transform: translateX(-10px) translateY(10px) rotate(45deg);
 }
-.left.active {
-	background: var(--primary);
-}
 .right {
 	transform: translateX(10px) translateY(10px) rotate(-45deg);
-}
-.right.active {
-	background: var(--primary);
-}
-.about-me-prompt > h3.active {
-	color: var(--primary);
-}
-.about-me-prompt.active {
-	color: var(--primary);
-	border: 1px solid var(--primary);
 }
 .statistics {
 	display: flex;
