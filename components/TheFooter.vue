@@ -20,5 +20,4 @@ footer {
     padding: 1rem;
   }
 }
-
 </style>

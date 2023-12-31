@@ -26,9 +26,6 @@ import { useScrollStore } from "~/store";
 export default {
 	methods: {
 		...mapActions(useScrollStore, ['scroll']),
-	},
-	beforeMount() {
-		this.scroll('about')
 	}
 };
 </script>

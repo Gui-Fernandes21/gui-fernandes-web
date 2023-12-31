@@ -118,6 +118,8 @@ form {
 	padding: 14px 25px;
   text-transform: uppercase;
   cursor: pointer;
+	color: var(--dark);
+	text-decoration: none;
 }
 
 @media only screen and (max-width: 600px) {

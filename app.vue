@@ -24,7 +24,7 @@ html {
 <style scoped>
 .layout {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
 	overflow-x: hidden;
 }
