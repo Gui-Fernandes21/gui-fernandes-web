@@ -80,7 +80,13 @@
 <script>
 import { mapActions } from "pinia";
 import { useScrollStore } from "~/store";
+
+import LayoutButton from "../LayoutButton.vue";
+
 export default {
+	components: {
+		LayoutButton
+	},
 	methods: {
 		...mapActions(useScrollStore, ["scroll"]),
 	},

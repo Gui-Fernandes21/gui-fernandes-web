@@ -1,4 +1,5 @@
 <template>
+	<LoadingModal>x</LoadingModal> 
 	<div class="layout">
 		<InfoCard></InfoCard>
 		<TheContent></TheContent>

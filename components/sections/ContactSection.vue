@@ -17,22 +17,22 @@
 				<div class="row">
 					<div class="form-control">
 						<label class="body-text" for="name">Full Name</label>
-						<input name="name" type="text" />
-					</div>
-					<div class="form-control">
-						<label class="body-text" for="email">Email</label>
-						<input name="email" type="email" />
+						<input name="name" v-model="name" type="text" />
 					</div>
 				</div>
 				<div class="row">
 					<div class="form-control">
 						<label class="body-text" for="phone">Phone</label>
-						<input name="phone" type="tel" />
+						<input name="phone" v-model="phone" type="tel" />
 					</div>
 					<div class="form-control">
-						<label class="body-text" for="subject">Subject</label>
-						<input name="subject" type="text" />
+						<label class="body-text" for="email">Email</label>
+						<input name="email" v-model="email" type="email" />
 					</div>
+					<!-- <div class="form-control">
+						<label class="body-text" for="subject">Subject</label>
+						<input name="subject" type="text" v-model="subject" />
+					</div> -->
 				</div>
 				<div class="row">
 					<div class="form-control textArea">
@@ -42,16 +42,54 @@
 							id="message"
 							cols="30"
 							rows="10"
+							v-model="message"
 						></textarea>
 					</div>
 				</div>
 				<div class="row action">
-					<button class="body-text bold">send message</button>
+					<button class="body-text bold" @click="sendMail">send message</button>
 				</div>
 			</form>
 		</div>
 	</div>
 </template>
+
+<script>
+import axios from "axios";
+export default {
+	data() {
+		return {
+			name: "",
+			email: "",
+			phone: "",
+			message: "",
+		};
+	},
+	methods: {
+		sendMail() {
+			axios
+				.post("https://formspree.io/f/mayryokq", {
+					message: this.message,
+					name: this.name,
+					phone: this.phone,
+					email: this.email,
+					subject: this.subject,
+				})
+				.then((result) => {
+					console.log(result);
+					this.clearFields();
+				})
+				.catch((err) => console.log(err));
+		},
+		clearFields() {
+			this.name = ""
+			this.email = ""
+			this.phone = ""
+			this.message = ""
+		}
+	},
+};
+</script>
 
 <style scoped>
 header {
@@ -83,7 +121,7 @@ form {
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 10px;
-	
+
 	width: 100%;
 }
 .form-control {
@@ -114,10 +152,10 @@ form {
 .action > button {
 	border-radius: 43px;
 	background: var(--primary);
-  border: none;
+	border: none;
 	padding: 14px 25px;
-  text-transform: uppercase;
-  cursor: pointer;
+	text-transform: uppercase;
+	cursor: pointer;
 	color: var(--dark);
 	text-decoration: none;
 }
