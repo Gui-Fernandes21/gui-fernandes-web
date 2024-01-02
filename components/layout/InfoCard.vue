@@ -15,12 +15,12 @@
 				<img src="/images/portfolio-pic-b&w.JPG?url" alt="" />
 			</div>
 			<div class="info-section">
+				<div class="location">Orlando, Florida</div>
 				<div class="email">
 					<p class="body-text">GuiFernandesPro@gmail.com</p>
 				</div>
-				<div class="location">Orlando, Florida</div>
 				<div class="social-buttons">
-					<div class="linkedin">
+					<div class="linkedin" @click="socialBtn('linkedin')">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="36"
@@ -43,7 +43,7 @@
 							/>
 						</svg>
 					</div>
-					<div class="github">
+					<div class="github" @click="socialBtn">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="36"
@@ -68,7 +68,7 @@
 					</div>
 				</div>
 				<div class="action">
-					<LayoutButton outline @click="scroll('#contact')"
+					<LayoutButton  @click="scroll('#contact')"
 						>CONTACT ME</LayoutButton
 					>
 				</div>
@@ -88,6 +88,16 @@ export default {
 	},
 	methods: {
 		...mapActions(useScrollStore, ["scroll"]),
+		socialBtn(direction) {
+			if (direction == "linkedin") {
+				window.open(
+					"https://www.linkedin.com/in/guilherme-fernandes-pro/",
+					"_blank"
+				);
+			} else {
+				window.open("https://github.com/Gui-Fernandes21", "_blank");
+			}
+		},
 	},
 };
 </script>
@@ -109,7 +119,7 @@ img {
 	display: flex;
 }
 .card {
-	width: 391px;
+	width: 30%;
 	height: 527px;
 	overflow: hidden;
 	border-radius: 60px;
@@ -135,6 +145,7 @@ img {
 .info-section {
 	text-align: center;
 	font-family: "Playfair", serif;
+	margin: 1rem;
 }
 .info-section p {
 	margin: 6px;
@@ -145,6 +156,7 @@ img {
 
 	p {
 		font-size: 11px;
+		/* text-decoration: underline; */
 	}
 }
 .location {
@@ -170,11 +182,38 @@ img {
 	justify-content: center;
 }
 
-@media only screen and (max-width: 600px) {
+svg:hover {
+	path {
+		fill: var(--primary);
+	}
+	rect {
+		stroke: var(--primary);
+	}
+}
+
+@media only screen and (max-width: 1088px) {
 	.card {
 		position: relative;
 		width: 90vw;
 		margin: 2rem auto;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.card {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.info-section {
+		padding: 2rem;
+	}
+	.name > h1 {
+		font-size: 1.4rem;
+	}
+	img {
+		width: 50%;
+		height: 100%;
 	}
 }
 </style>
