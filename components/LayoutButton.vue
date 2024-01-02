@@ -31,11 +31,13 @@ export default {
 	display: flex;
 	width: 6rem;
 	overflow: hidden;
-	padding: 5px 41px;
+	padding: 0 41px;
 	border-radius: 12px;
+	border: 2px solid var(--primary);
 	/* background: var(--primary); */
 	justify-content: center;
 	align-items: center;
+	transition: all 100ms ease-in-out;
 }
 
 .filled {
@@ -45,7 +47,6 @@ export default {
 .outlined {
 	color: var(--primary);
 	background: transparent;
-	border: 2px solid var(--primary);
 }
 
 @media(hover: hover)  {
