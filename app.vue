@@ -1,4 +1,5 @@
 <template>
+	<LoadingModal v-if="loading"></LoadingModal>
 	<div class="layout">
 		<InfoCard></InfoCard>
 		<TheContent></TheContent>
@@ -6,6 +7,17 @@
 	</div>
 	<TheFooter></TheFooter>
 </template>
+
+<script>
+import { mapState } from "pinia";
+// import { useModalStore } from "~/stores";
+
+export default {
+	computed: {
+		...mapState(useModalStore, ["loading"]),
+	},
+};
+</script>
 
 <style>
 @import "normalize.css";
@@ -29,3 +41,4 @@ html {
 	overflow-x: hidden;
 }
 </style>
+~/store/scroll ~/store/modal

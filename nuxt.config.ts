@@ -3,6 +3,11 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	modules: ["nuxt-icons", "@pinia/nuxt"],
 	css: ["~/assets/css/main.css"],
+	components: [
+		{ path: "~/components/sections", pathPrefix: false },
+		{ path: "~/components/layout", pathPrefix: false },
+		{ path: "~/components/modal", pathPrefix: false },
+	],
 	nuxtIcons: {
 		class: "icon",
 	},
@@ -11,11 +16,14 @@ export default defineNuxtConfig({
 			title: "Gui Web Dev",
 		},
 	},
+	pinia: {
+		storesDirs: ["./stores/**"],
+	},
 	nitro: {
-		preset: 'firebase',
-    firebase: {
-      gen: 2,
-			nodeVersion: '18'
-    }
-  }
+		preset: "firebase",
+		firebase: {
+			gen: 2,
+			nodeVersion: "18",
+		},
+	},
 });
