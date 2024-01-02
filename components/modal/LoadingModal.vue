@@ -2,21 +2,32 @@
 	<div class="wrapper">
 		<div class="card">
 			<span class="loader"></span>
-			<p class="body-text ">Loading...</p>
-			<span class="body-text bold close">+</span>
+			<p class="body-text">Loading...</p>
+			<!-- <span class="body-text bold close" @click="closeModal">+</span> -->
 		</div>
 	</div>
 </template>
 
-<style scoped>
+<script>
+import { mapActions } from "pinia";
+export default {
+	methods: {
+		...mapActions(useModalStore, ['setLoading']),
+		
+		closeModal() {
+			this.setLoading(false);
+		}
+	}
+};
+</script>
 
+<style scoped>
 .wrapper {
-  background: #00000069;
+	background: #00000069;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 100;
-	
 
 	width: 100vw;
 	height: 100%;

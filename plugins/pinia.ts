@@ -1,4 +1,4 @@
-import { useScrollStore } from "~/store";
+import { useScrollStore } from "~/stores/scroll";
 
 export default defineNuxtPlugin(({ $pinia }) => {
 	return {

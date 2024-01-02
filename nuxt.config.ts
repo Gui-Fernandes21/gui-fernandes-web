@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	components: [
 		{ path: "~/components/sections", pathPrefix: false },
 		{ path: "~/components/layout", pathPrefix: false },
-		{ path: "~/components/modal", pathPrefix: false }
+		{ path: "~/components/modal", pathPrefix: false },
 	],
 	nuxtIcons: {
 		class: "icon",
@@ -15,6 +15,9 @@ export default defineNuxtConfig({
 		head: {
 			title: "Gui Web Dev",
 		},
+	},
+	pinia: {
+		storesDirs: ["./stores/**"],
 	},
 	nitro: {
 		preset: "firebase",

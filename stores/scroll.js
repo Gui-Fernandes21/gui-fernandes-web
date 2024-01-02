@@ -8,11 +8,3 @@ export const useScrollStore = defineStore("scroll", {
 		},
 	},
 });
-
-export const useModalStore = defineStore('modal', {
-	data() {
-		return {
-			loading: false
-		}
-	}
-})

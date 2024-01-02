@@ -7,13 +7,43 @@
 				<div class="line3"></div>
 			</div> -->
 			<div class="floating-nav">
-				<nuxt-icon @click="scroll('#intro')" class="icon" name="house" filled></nuxt-icon>
-				<nuxt-icon @click="scroll('#about')" class="icon" name="person" filled></nuxt-icon>
-				<nuxt-icon @click="scroll('#experience')" class="icon" name="work" filled></nuxt-icon>
-				<nuxt-icon @click="scroll('#education')" class="icon" name="study" filled></nuxt-icon>
-				<nuxt-icon @click="scroll('#skills')" class="icon skill" name="skills" filled></nuxt-icon>
+				<nuxt-icon
+					@click="scroll('#intro')"
+					class="icon"
+					name="house"
+					filled
+				></nuxt-icon>
+				<nuxt-icon
+					@click="scroll('#about')"
+					class="icon"
+					name="person"
+					filled
+				></nuxt-icon>
+				<nuxt-icon
+					@click="scroll('#experience')"
+					class="icon"
+					name="work"
+					filled
+				></nuxt-icon>
+				<nuxt-icon
+					@click="scroll('#education')"
+					class="icon"
+					name="study"
+					filled
+				></nuxt-icon>
+				<nuxt-icon
+					@click="scroll('#skills')"
+					class="icon skill"
+					name="skills"
+					filled
+				></nuxt-icon>
 				<!-- <nuxt-icon @click="scroll('#projects')" class="icon" name="projects" filled></nuxt-icon> -->
-				<nuxt-icon @click="scroll('#contact')" class="icon" name="contact" filled></nuxt-icon>
+				<nuxt-icon
+					@click="scroll('#contact')"
+					class="icon"
+					name="contact"
+					filled
+				></nuxt-icon>
 			</div>
 		</section>
 	</section>
@@ -21,12 +51,11 @@
 
 <script>
 import { mapActions } from "pinia";
-import { useScrollStore } from "~/store";
 
 export default {
 	methods: {
-		...mapActions(useScrollStore, ['scroll']),
-	}
+		...mapActions(useScrollStore, ["scroll"]),
+	},
 };
 </script>
 
@@ -95,3 +124,4 @@ export default {
 	fill: var(--primary);
 }
 </style>
+~/store/scroll ~/store/modal
