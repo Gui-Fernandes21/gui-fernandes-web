@@ -50,7 +50,7 @@
 	margin: 0 auto;
 	color: var(--gray-300);
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 	.about-wrapper {
 		width: 90vw;
 	}

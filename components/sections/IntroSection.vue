@@ -146,7 +146,7 @@ header > span {
 	color: var(--gray-300);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 	#intro {
 		width: 90vw;
 		margin: auto;

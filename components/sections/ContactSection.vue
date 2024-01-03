@@ -200,7 +200,7 @@ form {
 	text-decoration: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 	form {
 		width: 90vw;
 	}
