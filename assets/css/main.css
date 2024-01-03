@@ -115,7 +115,7 @@
 	gap: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 680px) {
 	/* Mobile Fonts */
 	.heading-0 {
 		font-size: 48px;

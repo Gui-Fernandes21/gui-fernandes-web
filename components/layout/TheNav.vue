@@ -123,5 +123,10 @@ export default {
 .icon:hover :deep(svg path) {
 	fill: var(--primary);
 }
+@media only screen and (max-width: 1088px) {
+	.nav-wrapper {
+		display: none;
+	}
+}
 </style>
 ~/store/scroll ~/store/modal
