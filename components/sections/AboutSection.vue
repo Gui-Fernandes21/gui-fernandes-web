@@ -16,7 +16,7 @@
 			<span class="body-text bold">About</span>
 		</SectionToast>
 
-		<div class="about-wrapper">
+		<div class="about-wrapper" data-aos="fade-left">
 			<h1 class="heading-1">
 				Nice to meet <span class="primary-text">you!</span>
 			</h1>

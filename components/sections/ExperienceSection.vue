@@ -16,26 +16,8 @@
 			<span class="body-text bold">Experience</span>
 		</SectionToast>
 		<div class="content-wrapper">
-			<!-- <div class="svg-wrapper">
-				<svg
-					width="16"
-					height="500"
-					viewBox="0 0 16 546"
-					fill="none"
-					xmlns="http://www.w3.org/2000/svg"
-				>
-					<path
-						d="M8 12L7.99998 542"
-						stroke="#484848"
-						stroke-width="8"
-						stroke-linecap="round"
-					/>
-					<circle cx="8" cy="14" r="8" fill="#2AEA8C" />
-					<circle cx="8" cy="322" r="8" fill="#2AEA8C" />
-				</svg>
-			</div> -->
 			<div class="content">
-				<div class="cxp-experience">
+				<div class="cxp-experience" data-aos="fade-left">
 					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">
@@ -63,7 +45,7 @@
 					</p>
 				</div>
 
-				<div class="sparks-experience">
+				<div class="sparks-experience" data-aos="fade-left">
 					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">

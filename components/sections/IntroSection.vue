@@ -1,5 +1,5 @@
 <template>
-	<section id="intro">
+	<section id="intro" data-aos="fade-left" data-aos-delay="600">
 		<SectionToast>
 			<nuxt-icon class="icon" name="house" filled></nuxt-icon>
 			<span class="body-text bold">Intro</span>

@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	devtools: { enabled: true },
-	modules: ["nuxt-icons", "@pinia/nuxt"],
+	modules: ["nuxt-icons", "@pinia/nuxt", "nuxt-aos"],
 	css: ["~/assets/css/main.css"],
 	components: [
 		{ path: "~/components/sections", pathPrefix: false },
@@ -18,6 +18,11 @@ export default defineNuxtConfig({
 	},
 	pinia: {
 		storesDirs: ["./stores/**"],
+	},
+	aos: {
+		duration: 800,
+		easing: "ease-in-out",
+		
 	},
 	nitro: {
 		preset: "firebase",

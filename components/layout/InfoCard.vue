@@ -1,6 +1,6 @@
 <template>
 	<section class="card-wrapper">
-		<div class="card">
+		<div class="card" data-aos="fade-down" data-aos-delay="600">
 			<header>
 				<div class="name">
 					<h1 class="heading-3">
@@ -68,9 +68,7 @@
 					</div>
 				</div>
 				<div class="action">
-					<LayoutButton  @click="scroll('#contact')"
-						>CONTACT ME</LayoutButton
-					>
+					<LayoutButton @click="scroll('#contact')">CONTACT ME</LayoutButton>
 				</div>
 			</div>
 		</div>
