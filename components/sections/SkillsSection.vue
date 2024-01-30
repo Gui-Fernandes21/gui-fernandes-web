@@ -20,7 +20,7 @@
 
 		<div class="content-wrapper">
 			<div class="skill" v-for="icon in iconsList">
-				<div class="card-skill" >
+				<div class="card-skill" :data-aos="icon.animation">
 					<nuxt-icon class="icon" :name="icon.iconName" filled></nuxt-icon>
 					<h3 class="heading-3">{{ icon.percentage }}%</h3>
 				</div>

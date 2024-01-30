@@ -17,24 +17,8 @@
 		</SectionToast>
 
 		<div class="content-wrapper">
-			<!-- <svg
-				width="16"
-				height="293"
-				viewBox="0 0 16 293"
-				fill="none"
-				xmlns="http://www.w3.org/2000/svg"
-			>
-				<path
-					d="M8 12L7.99999 289"
-					stroke="#484848"
-					stroke-width="8"
-					stroke-linecap="round"
-				/>
-				<circle cx="8" cy="8" r="8" fill="#2AEA8C" />
-				<circle cx="8" cy="119" r="8" fill="#2AEA8C" />
-			</svg> -->
 			<div class="content">
-				<div class="uol-education">
+				<div class="uol-education" data-aos="fade-left">
 					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">
@@ -46,7 +30,7 @@
 						<span class="primary-text">Performance</span> Base Admission
 					</p>
 				</div>
-				<div class="imd-education">
+				<div class="imd-education" data-aos="fade-left">
 					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">
