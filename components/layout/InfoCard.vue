@@ -216,10 +216,10 @@ svg:hover {
 		justify-content: space-between;
 	}
 	.info-section {
-		padding: 2rem;
+		padding: 1.8rem 0;
 	}
 	.name > h1 {
-		font-size: 1.4rem;
+		font-size: 2rem;
 	}
 	img {
 		width: 50%;
