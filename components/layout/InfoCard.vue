@@ -3,7 +3,7 @@
 		<div class="card" data-aos="fade-down" data-aos-delay="600">
 			<header>
 				<div class="name">
-					<h1 class="heading-3">
+					<h1 class="heading-2">
 						<span class="primary-text">Gui</span> Fernandes
 					</h1>
 				</div>
@@ -12,13 +12,13 @@
 				</div>
 			</header>
 			<div class="img-wrapper">
-				<img src="/images/portfolio-pic-b&w.JPG?url" alt="" />
+				<img src="/images/portfolio-pic-b&w.JPG?url" alt="My Picture" />
 			</div>
 			<div class="info-section">
-				<div class="location">Orlando, Florida</div>
-				<div class="email">
+				<div class="location">Brussels, Belgium</div>
+				<!-- <div class="email">
 					<p class="body-text">GuiFernandesPro@gmail.com</p>
-				</div>
+				</div> -->
 				<div class="social-buttons">
 					<div class="linkedin" @click="socialBtn('linkedin')">
 						<svg
@@ -104,6 +104,7 @@ export default {
 header {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin: 1.1rem 2rem;
 }
 img {
@@ -117,7 +118,7 @@ img {
 	display: flex;
 }
 .card {
-	width: 30%;
+	width: 25%;
 	height: 527px;
 	overflow: hidden;
 	border-radius: 60px;
@@ -125,7 +126,11 @@ img {
 		0px 0px 12.6px 0px rgba(0, 0, 0, 0.25) inset;
 	background: var(--dark);
 	margin: 2rem 1rem;
+	/* padding: 1rem; */
 	position: fixed;
+}
+.name > h1 {
+	font-family: "Bebas Neue", sans-serif;
 }
 .description-role {
 	width: 4rem;
@@ -161,6 +166,7 @@ img {
 	color: #fff;
 	font-size: 16px;
 	font-style: normal;
+	font-family: "Bebas Neue", sans-serif;
 	font-weight: 400;
 	line-height: 142%;
 }
@@ -178,6 +184,12 @@ img {
 .action {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+
+	div {
+		width: 100%;
+		margin: 0 2rem;
+	}
 }
 
 svg:hover {
