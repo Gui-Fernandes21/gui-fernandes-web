@@ -81,4 +81,6 @@ npm run build --preset=firebase
 
 npx firebase-tools deploy
 
+
+npm run deploy 
 ```
