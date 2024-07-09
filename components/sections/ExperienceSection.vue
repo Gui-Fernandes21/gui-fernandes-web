@@ -24,7 +24,7 @@
 							CXP Brasil Consulting, <span class="italic">Brazil</span> —
 							<span class="primary-text italic">Lead Front End Developer</span>
 						</h1>
-						<span class="body-text italic">April 2022 - Present</span>
+						<span class="body-text italic">April 2022 - April 2024</span>
 					</header>
 					<p class="body-text">
 						<span class="primary-text">Lead Developer</span> of the <span class="primary-text">Front End</span> Squad in the development of Web
