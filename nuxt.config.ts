@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+	compatibilityDate: "2025-01-10",
 	devtools: { enabled: true },
 	modules: ["nuxt-icons", "@pinia/nuxt", "nuxt-aos"],
 	css: ["~/assets/css/main.css"],

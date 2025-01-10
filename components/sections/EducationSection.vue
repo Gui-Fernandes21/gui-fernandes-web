@@ -25,10 +25,44 @@
 							University of London, <span class="italic">UK</span> —
 							<span class="primary-text italic">BSc Computer Science</span>
 						</h1>
+						<span class="body-text">April 2026 - 3.5 GPA (Current)</span>
 					</header>
-					<p class="body-text">
-						<span class="primary-text">Performance</span> Base Admission
-					</p>
+					<div class="courses">
+						<h4 class="heading-4">Courses:</h4>
+						<ul>
+							<li class="body-text">Data Structure & Algorithms.</li>
+							<li class="body-text">
+								Object-Oriented Programming (OOP with C++).
+							</li>
+							<li class="body-text">
+								Software Development & Agile Practices (JavaScript).
+							</li>
+							<li class="body-text">Fundamentals of Computer Science.</li>
+							<li class="body-text">Programming with Data (Python).</li>
+							<li class="body-text">Machine Learning / Data Analysis.</li>
+						</ul>
+					</div>
+					<div class="achievements">
+						<h4 class="heading-4">Key Achievements::</h4>
+						<ul>
+							<li class="body-text">
+								Developed a climate change analysis report using Python and data
+								analysis techniques.
+							</li>
+							<li class="body-text">
+								Created a habit tracker app as part of an Agile project team.
+							</li>
+							<li class="body-text">
+								Designed a technical analysis toolkit for weather data
+								visualization with candlestick graphs in C++
+							</li>
+							<li class="body-text">
+								Developed a web-based music visualization application using the
+								p5.js library, integrating real-time audio input through the
+								computer's microphone for an interactive user experience.
+							</li>
+						</ul>
+					</div>
 				</div>
 				<div class="imd-education" data-aos="fade-left">
 					<div class="dot"></div>
@@ -52,6 +86,17 @@
 </template>
 
 <style scoped>
+ul {
+	padding-left: 1rem;
+}
+li {
+	list-style: circle;
+	color: var(--gray-500);
+}
+h4 {
+	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+}
 header > span {
 	color: var(--gray-500);
 }
