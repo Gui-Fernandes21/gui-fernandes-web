@@ -23,7 +23,7 @@
 					/>
 				</div>
 				<div class="form-control">
-					<input placeholder="Phone" name="phone" v-model="phone" type="tel" />
+					<input placeholder="Phone" v-maska="'+1 (###) ###-####'" name="phone" v-model="phone" type="tel" />
 				</div>
 				<div class="form-control">
 					<input
@@ -53,8 +53,10 @@
 <script>
 import axios from "axios";
 import { mapActions } from "pinia";
+import { vMaska } from 'maska/vue';
 
 export default {
+	directives: { maska: vMaska },
 	data() {
 		return {
 			name: "",
