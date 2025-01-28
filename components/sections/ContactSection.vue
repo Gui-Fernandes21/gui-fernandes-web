@@ -167,7 +167,6 @@ form {
 }
 .row.action {
 	display: flex;
-	grid-columns: span 2;
 	margin-top: 1rem;
 }
 .action > button {
