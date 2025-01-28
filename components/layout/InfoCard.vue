@@ -12,10 +12,10 @@
 				</div>
 			</header>
 			<div class="img-wrapper">
-				<img src="/images/portfolio-pic-b&w.JPG?url" alt="My Picture" />
+				<img src="/images/profilesocial-me.jpg" alt="My Picture" />
 			</div>
 			<div class="info-section">
-				<div class="location">Brussels, Belgium</div>
+				<div class="location">Orlando, Florida</div>
 				<!-- <div class="email">
 					<p class="body-text">GuiFernandesPro@gmail.com</p>
 				</div> -->

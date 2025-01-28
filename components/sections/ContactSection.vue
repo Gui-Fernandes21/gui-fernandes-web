@@ -10,62 +10,42 @@
 				<h2 class="heading-2 bold">
 					Let's Work <span class="primary-text">Together</span>
 				</h2>
-				<h4 class="heading-4">GuiFernandesPro@gmail.com</h4>
+				<!-- <h4 class="heading-4">GuiFernandesPro@gmail.com</h4> -->
 			</header>
 
-			<form @submit.prevent>
-				<div class="row">
-					<div class="form-control input">
-						<!-- <label class="body-text" for="name">Full Name</label> -->
-						<input
-							placeholder="Full Name"
-							name="name"
-							v-model="name"
-							type="text"
-						/>
-					</div>
+			<form @submit.prevent class="form-grid">
+				<div class="form-control input full-width">
+					<input
+						placeholder="Full Name"
+						name="name"
+						v-model="name"
+						type="text"
+					/>
 				</div>
-				<div class="row">
-					<div class="form-control">
-						<!-- <label class="body-text" for="phone">Phone</label> -->
-						<input
-							placeholder="Phone"
-							name="phone"
-							v-model="phone"
-							type="tel"
-						/>
-					</div>
-					<div class="form-control">
-						<!-- <label class="body-text" for="email">Email</label> -->
-						<input
-							placeholder="Email"
-							name="email"
-							v-model="email"
-							type="email"
-						/>
-					</div>
-					<!-- <div class="form-control">
-						<label class="body-text" for="subject">Subject</label>
-						<input name="subject" type="text" v-model="subject" />
-					</div> -->
+				<div class="form-control">
+					<input placeholder="Phone" name="phone" v-model="phone" type="tel" />
 				</div>
-				<div class="row">
-					<div class="form-control textArea">
-						<!-- <label class="body-text" for="message">Message</label> -->
-						<textarea
-							placeholder="Message"
-							name="message"
-							id="message"
-							cols="30"
-							rows="10"
-							v-model="message"
-						></textarea>
-					</div>
+				<div class="form-control">
+					<input
+						placeholder="Email"
+						name="email"
+						v-model="email"
+						type="email"
+					/>
 				</div>
-				<div class="row action">
-					<button class="body-text bold" @click="sendMail">send message</button>
+				<div class="form-control full-width">
+					<textarea
+						placeholder="Message"
+						name="message"
+						v-model="message"
+					></textarea>
 				</div>
 			</form>
+			<div class="row action">
+				<button class="body-text" @click="sendMail" type="submit">
+					Send Message
+				</button>
+			</div>
 		</div>
 	</div>
 </template>
@@ -73,6 +53,7 @@
 <script>
 import axios from "axios";
 import { mapActions } from "pinia";
+
 export default {
 	data() {
 		return {
@@ -100,7 +81,7 @@ export default {
 						this.clearFields();
 						this.setLoading(false);
 					} else {
-						throw new Error('Back end problem');
+						throw new Error("Back end problem");
 					}
 				})
 				.catch((err) => console.log(err));
@@ -127,7 +108,6 @@ header > h4 {
 }
 .content-wrapper {
 	justify-content: center;
-	align-items: center;
 	flex-direction: column;
 }
 form {
@@ -141,9 +121,6 @@ form {
 }
 .row {
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
 	gap: 10px;
 
 	width: 100%;
@@ -153,12 +130,15 @@ form {
 	flex-direction: column;
 	justify-content: space-evenly;
 }
+.form-control > textarea {
+	min-height: 150px;
+}
 .form-control > input,
 .form-control > textarea {
 	background: #272729;
 	border: none;
-	border-bottom: 1px solid var(--primary-dark);
-	border-radius: 5px;
+	border-bottom: 1.5px solid var(--primary-dark);
+	border-radius: 2px;
 	color: var(--gray-100);
 	font-family: "Source Sans 3", sans-serif;
 	padding: 10px 12px;
@@ -186,26 +166,57 @@ form {
 	width: 100%;
 }
 .row.action {
-	justify-content: flex-start;
+	display: flex;
 	margin-top: 1rem;
 }
 .action > button {
-	border-radius: 43px;
+	border-radius: 10px;
 	background: var(--primary);
-	border: none;
-	padding: 14px 25px;
+	border: 1px solid var(--primary);
+	padding: 1rem 2rem;
 	text-transform: uppercase;
 	cursor: pointer;
 	color: var(--dark);
-	text-decoration: none;
+
+	width: 100%;
+
+	font-weight: bold;
+	font-family: "Source Sans 3", sans-serif;
+
+	&:hover {
+		background: var(--dark);
+		color: var(--primary);
+	}
 }
 
 @media only screen and (max-width: 680px) {
-	form {
-		width: 90vw;
+	.form-grid {
+		display: flex !important;
+		flex-direction: column;
+		gap: 1rem;
 	}
 	.form-control {
 		width: 100%;
+	}
+}
+
+.form-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+
+.form-control.full-width {
+	grid-column: span 2;
+}
+
+@media (min-width: 768px) {
+	.form-grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.form-control.full-width {
+		grid-column: span 2;
 	}
 }
 </style>

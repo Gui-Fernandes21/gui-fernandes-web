@@ -22,17 +22,17 @@
 					<header>
 						<h1 class="heading-3 bold">
 							CXP Brasil Consulting, <span class="italic">Brazil</span> —
-							<span class="primary-text italic">Lead Front End Developer</span>
+							<span class="primary-text italic">Front End Developer</span>
 						</h1>
-						<span class="body-text italic">April 2022 - Present</span>
+						<span class="body-text italic">April 2022 - April 2024</span>
 					</header>
 					<p class="body-text">
-						<span class="primary-text">Lead Developer</span> of the <span class="primary-text">Front End</span> Squad in the development of Web
+						<span class="primary-text">Developer</span> of the <span class="primary-text">Front End</span> Squad in the development of Web
 						Applications for <span class="primary-text">Unimed</span>, the biggest Brazilian medical work
 						cooperative and health insurance operator.
 					</p>
 					<p class="body-text">
-						I led a dynamic team of front-end developers to deliver <span class="primary-text">high-quality</span>
+						I participated on a dynamic team of front-end developers to deliver <span class="primary-text">high-quality</span>
 						and responsive user interfaces utilizing <span class="primary-text">Vue.js Framework</span>. In this
 						role I have also implemented <span class="primary-text">performance optimization strategies</span> to
 						enhance the speed and responsiveness of web applications for

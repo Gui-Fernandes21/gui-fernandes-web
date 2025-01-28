@@ -11,8 +11,9 @@
 				<span class="primary-text">Web</span> Developer
 			</h1>
 			<span class="body-text">
-				I build Web Apps, Code Beautifully, Good Team Player, and Love what I
-				do!
+				I build high-quality web applications, write clean
+				and efficient code, collaborate effectively with teams, and
+				approach every project with passion and dedication.
 			</span>
 		</header>
 
@@ -29,7 +30,7 @@
 		<div class="statistics-wrapper">
 			<div class="statistics">
 				<div class="experience">
-					<h1>3+</h1>
+					<h1>4+</h1>
 					<span class="body-text">Years of Experience</span>
 				</div>
 				<!-- <div class="projects">
