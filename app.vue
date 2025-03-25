@@ -21,6 +21,9 @@ export default {
 
 <style>
 @import "normalize.css";
+* {
+	box-sizing: border-box;
+}
 html {
 	background: var(--dark);
 	scroll-behavior: smooth;
@@ -35,10 +38,12 @@ html {
 
 <style scoped>
 .layout {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	overflow-x: hidden;
+	display: grid;
+	grid-template-columns: 2fr 4fr 4rem;
+	
+	align-items: start;
+	/* gap: 1; */
+	
 }
 </style>
 ~/store/scroll ~/store/modal

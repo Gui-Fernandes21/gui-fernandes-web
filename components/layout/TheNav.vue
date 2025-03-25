@@ -61,17 +61,24 @@ export default {
 
 <style scoped>
 .nav-wrapper {
-	width: 5rem;
+	position: relative;
+	
+	
 	display: flex;
+	justify-content: center;
+	
+	
+	width: 5rem;
+	height: 100%;
 }
 .nav {
-	display: flex;
 	position: fixed;
+
+	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	height: calc(100dvh - 2rem);
-	margin-top: 2rem;
-	margin-right: 2rem;
 }
 .burger-menu {
 	display: flex;
