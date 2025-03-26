@@ -28,6 +28,7 @@ html {
 	background: var(--dark);
 	scroll-behavior: smooth;
 	scroll-padding-top: 5rem;
+	overflow-x: hidden;
 }
 .nuxt-icon svg {
 	font-size: 1.3rem;
@@ -42,7 +43,6 @@ html {
 	grid-template-columns: 2fr 4fr 4rem;
 	
 	align-items: start;
-	/* gap: 1; */
 	
 }
 </style>

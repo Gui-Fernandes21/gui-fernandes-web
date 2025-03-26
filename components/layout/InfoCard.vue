@@ -1,6 +1,6 @@
 <template>
   <section class="card-wrapper">
-    <div class="card" data-aos="fade-down" data-aos-delay="600">
+    <div class="card">
       <header>
         <div class="name">
           <h1 class="heading-2"><span class="primary-text">Gui</span> Fernandes</h1>
@@ -79,14 +79,17 @@ img {
 }
 .card-wrapper {
   display: flex;
-  /* position: fixed; */
+  position: relative;
 
   width: 100%;
 	height: 100%;
 
 }
 .card {
-  /* position: fixed; */
+  position: sticky;
+	top: 2rem;
+	left: 0;
+
   height: 90dvh;
   width: 100%;
 

@@ -1,6 +1,6 @@
 <template>
 	<footer>
-		<p class="body-text bold">© 2023 Gui Fernandes. All Rights Reserved</p>
+		<p class="body-text bold">© 2025 Gui Fernandes. All Rights Reserved</p>
 	</footer>
 </template>
 
