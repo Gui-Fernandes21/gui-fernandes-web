@@ -80,7 +80,7 @@ export default {
   overflow: hidden;
   padding: 31px 0;
   border-radius: 33px;
-  border: 1px solid var(--gray-900);
+  border: .5px solid var(--gray-700);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -90,8 +90,11 @@ export default {
   cursor: pointer;
 }
 .icon :deep(svg path) {
-  fill: var(--gray-900);
+  fill: var(--gray-700);
   transition: all 200ms ease-in-out;
+}
+.skill :deep(svg path) {
+	stroke: var(--gray-700);
 }
 .skill:hover :deep(svg path) {
   stroke: var(--primary);

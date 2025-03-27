@@ -1,23 +1,6 @@
 <template>
-	<LoadingModal v-if="loading"></LoadingModal>
-	<div class="layout">
-		<InfoCard></InfoCard>
-		<TheContent></TheContent>
-		<TheNav></TheNav>
-	</div>
-	<TheFooter></TheFooter>
+	<NuxtPage />
 </template>
-
-<script>
-import { mapState } from "pinia";
-// import { useModalStore } from "~/stores";
-
-export default {
-	computed: {
-		...mapState(useModalStore, ["loading"]),
-	},
-};
-</script>
 
 <style>
 @import "normalize.css";
@@ -37,13 +20,4 @@ html {
 }
 </style>
 
-<style scoped>
-.layout {
-	display: grid;
-	grid-template-columns: 2fr 4fr 4rem;
-	
-	align-items: start;
-	
-}
-</style>
 ~/store/scroll ~/store/modal

@@ -6,7 +6,7 @@
     </SectionToast>
 
     <header>
-      <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> I am a <span class="primary-text">Software</span> Developer </h1>
+      <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> a <span class="primary-text">Software</span> Developer </h1>
       <!-- <h1 class="heading-1">Welcome to my portfolio</h1> -->
       <span class="body-text"> I build high-quality web applications, write clean and efficient code, collaborate effectively with teams, and approach every project with passion and dedication. </span>
     </header>
@@ -27,10 +27,10 @@
           <h1>4+</h1>
           <span class="body-text">Years of Experience</span>
         </div>
-        <!-- <div class="projects">
-					<h1>4+</h1>
-					<span class="body-text">Personal Projects</span>
-				</div> -->
+        <div class="projects">
+					<h1>12+</h1>
+					<span class="body-text">Developed Projects</span>
+				</div>
       </div>
     </div>
   </section>
@@ -129,6 +129,8 @@ header > span {
   display: flex;
   gap: 2rem;
   margin: auto 2rem;
+
+	text-align: center;
 }
 .statistics h1 {
   color: var(--primary);

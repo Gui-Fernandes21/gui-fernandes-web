@@ -3,10 +3,10 @@
     <div class="card">
       <header>
         <div class="name">
-          <h1 class="heading-2"><span class="primary-text">Gui</span> Fernandes</h1>
+          <h1 class="heading-1"><span class="primary-text">Gui</span> Fernandes</h1>
         </div>
         <div class="role">
-          <h2 class="description-role">Front-End Developer</h2>
+          <h2 class="description-role">Software Developer</h2>
         </div>
       </header>
       <div class="img-wrapper">
@@ -69,11 +69,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1.1rem 2rem;
+  margin: 0.5rem 2rem;
 }
 img {
-  width: 209px;
-  height: 209px;
+  width: 17rem;
+  height: 17rem;
   flex-shrink: 0;
   border-radius: 36px;
 }
@@ -82,13 +82,12 @@ img {
   position: relative;
 
   width: 100%;
-	height: 100%;
-
+  height: 100%;
 }
 .card {
   position: sticky;
-	top: 2rem;
-	left: 0;
+  top: 2rem;
+  left: 0;
 
   height: 90dvh;
   width: 100%;
@@ -134,23 +133,25 @@ img {
 
 .location {
   color: #fff;
-  font-size: 16px;
+  font-size: 1.4rem;
   font-style: normal;
   font-family: 'Bebas Neue', sans-serif;
-  font-weight: 400;
-  line-height: 142%;
 }
 .social-buttons {
   display: flex;
-  width: 116px;
   justify-content: center;
   align-items: center;
-  gap: 22px;
+  gap: 20px;
   margin: 1rem auto;
 }
 .social-buttons svg {
   cursor: pointer;
+  transition: transform 0.2s; /* Add transition for scaling effect */
 }
+.social-buttons svg:hover {
+  transform: scale(1.1); /* Scale up on hover */
+}
+
 .action {
   display: flex;
   justify-content: center;

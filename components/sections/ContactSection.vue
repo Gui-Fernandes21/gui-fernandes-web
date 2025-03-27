@@ -137,7 +137,7 @@ form {
 }
 .form-control > input,
 .form-control > textarea {
-	background: #272729;
+	background: transparent;
 	border: none;
 	border-bottom: 1.5px solid var(--primary-dark);
 	border-radius: 2px;

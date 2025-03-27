@@ -22,7 +22,7 @@
 			</h1>
 			<p class="body-text">
 				I have started my <span class="primary-text">professional </span>Web
-				Development journey <span class="primary-text">3 years</span> ago. Since
+				Development journey <span class="primary-text">5 years</span> ago. Since
 				then, I have worked remotely for companies in
 				<span class="primary-text">Brazil and in the USA</span>, created digital
 				products for both
