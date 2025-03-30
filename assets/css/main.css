@@ -36,50 +36,39 @@
 /* Text Styles */
 .heading-0 {
 	color: #fff;
-	font-family: "Playfair", serif;
+	font-family: "Montserrat", serif;
 	font-size: 72px;
-	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
 }
 .heading-1 {
 	color: #fff;
-	font-family: "Playfair", serif;
+	font-family: "Montserrat", serif;
 	font-size: 48px;
-	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
 }
 .heading-2 {
 	color: #fff;
-	font-family: "Playfair", serif;
+	font-family: "Montserrat", serif;
 	font-size: 32px;
-	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
 }
 .heading-3 {
 	color: #fff;
-	font-family: "Playfair", serif;
+	font-family: "Montserrat", serif;
 	font-size: 24px;
-	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
 }
 .heading-4 {
 	color: #fff;
-	font-family: "Playfair", serif;
+	font-family: "Montserrat", serif;
 	font-size: 18px;
-	font-style: normal;
 	font-weight: 400;
-	line-height: normal;
 }
 
 .body-text {
 	/* Body */
 	font-family: "Source Sans 3", sans-serif;
 	font-size: 12px;
-	font-style: normal;
 	font-weight: 400;
 	line-height: 142%; /* 17.04px */
 }

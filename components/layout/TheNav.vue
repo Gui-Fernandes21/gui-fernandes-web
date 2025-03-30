@@ -20,6 +20,8 @@
 </template>
 
 <script setup lang="ts">
+import { useScroll } from '~/composables/useScroll';
+
 const { scroll } = useScroll();
 </script>
 

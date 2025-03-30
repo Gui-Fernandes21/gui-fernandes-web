@@ -8,7 +8,7 @@
     <header>
       <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> a <span class="primary-text">Software</span> Developer</h1>
       <!-- <h1 class="heading-1">Welcome to my portfolio</h1> -->
-      <span class="body-text"> I build high-quality web applications, write clean and efficient code, collaborate effectively with teams, and approach every project with passion and dedication. </span>
+      <span class="body-text"> Software Developer | Clean Code Advocate | Collaborative Professional</span>
     </header>
 
     <div class="wrapper">

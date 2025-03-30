@@ -43,7 +43,6 @@
 </template>
 
 <script setup lang="ts">
-
 const { scroll } = useScroll();
 
 function socialBtn(direction: string) {
