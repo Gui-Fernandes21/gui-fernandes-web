@@ -19,14 +19,8 @@
   </section>
 </template>
 
-<script>
-import { mapActions } from 'pinia';
-
-export default {
-  methods: {
-    ...mapActions(useScrollStore, ['scroll'])
-  }
-};
+<script setup lang="ts">
+const { scroll } = useScroll();
 </script>
 
 <style scoped>

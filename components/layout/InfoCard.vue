@@ -24,7 +24,7 @@
               />
             </svg>
           </div>
-          <div class="github" @click="socialBtn">
+          <div class="github" @click="socialBtn('github')">
             <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
               <rect x="0.704348" y="0.704348" width="34.513" height="34.513" rx="17.2565" stroke="#727272" stroke-width="1.4087" />
               <path
@@ -35,33 +35,24 @@
           </div>
         </div>
         <div class="action">
-          <LayoutButton @click="scroll('#contact')">CONTACT ME</LayoutButton>
+          <Button @click="scroll('#contact')">CONTACT ME</Button>
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-import { mapActions } from 'pinia';
+<script setup lang="ts">
 
-import LayoutButton from '../LayoutButton.vue';
+const { scroll } = useScroll();
 
-export default {
-  components: {
-    LayoutButton
-  },
-  methods: {
-    ...mapActions(useScrollStore, ['scroll']),
-    socialBtn(direction) {
-      if (direction == 'linkedin') {
-        window.open('https://www.linkedin.com/in/guilherme-fernandes-pro/', '_blank');
-      } else {
-        window.open('https://github.com/Gui-Fernandes21', '_blank');
-      }
-    }
+function socialBtn(direction: string) {
+  if (direction == 'linkedin') {
+    window.open('https://www.linkedin.com/in/guilherme-fernandes-pro/', '_blank');
+  } else {
+    window.open('https://github.com/Gui-Fernandes21', '_blank');
   }
-};
+}
 </script>
 
 <style scoped>

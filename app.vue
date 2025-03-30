@@ -2,6 +2,10 @@
 	<NuxtPage />
 </template>
 
+<script setup lang="ts">
+useState("loading", () => false);
+</script>
+
 <style>
 @import "normalize.css";
 * {

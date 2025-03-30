@@ -8,22 +8,15 @@
   <TheFooter></TheFooter>
 </template>
 
-<script>
-import { mapState } from "pinia";
-
-export default {
-	computed: {
-		...mapState(useModalStore, ["loading"]),
-	},
-};
+<script setup lang="ts">
+const loading = useState('loading');
 </script>
 
 <style scoped>
 .layout {
-	display: grid;
-	grid-template-columns: 2fr 4fr 4rem;
-	
-	align-items: start;
-	
+  display: grid;
+  grid-template-columns: 2fr 4fr 4rem;
+
+  align-items: start;
 }
 </style>

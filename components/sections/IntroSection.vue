@@ -6,13 +6,13 @@
     </SectionToast>
 
     <header>
-      <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> a <span class="primary-text">Software</span> Developer </h1>
+      <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> a <span class="primary-text">Software</span> Developer</h1>
       <!-- <h1 class="heading-1">Welcome to my portfolio</h1> -->
       <span class="body-text"> I build high-quality web applications, write clean and efficient code, collaborate effectively with teams, and approach every project with passion and dedication. </span>
     </header>
 
     <div class="wrapper">
-      <div class="about-me-prompt" @click="scrollAboutMe">
+      <div class="about-me-prompt" @click="scroll('#about')">
         <h3>About me</h3>
         <div class="arrow-container">
           <div class="left"></div>
@@ -28,28 +28,16 @@
           <span class="body-text">Years of Experience</span>
         </div>
         <div class="projects">
-					<h1>12+</h1>
-					<span class="body-text">Developed Projects</span>
-				</div>
+          <h1>12+</h1>
+          <span class="body-text">Developed Projects</span>
+        </div>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isActive: false
-    };
-  },
-  methods: {
-    scrollAboutMe() {
-      const el = document.querySelector('#about');
-      if (el) el.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-};
+<script setup lang="ts">
+const { scroll } = useScroll();
 </script>
 
 <style scoped>
@@ -130,7 +118,7 @@ header > span {
   gap: 2rem;
   margin: auto 2rem;
 
-	text-align: center;
+  text-align: center;
 }
 .statistics h1 {
   color: var(--primary);

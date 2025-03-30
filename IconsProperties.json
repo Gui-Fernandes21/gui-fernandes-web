@@ -1,12 +1,12 @@
 {
   "skills": [
-    { "animation": "fade-right", "name": "Vue.js", "iconName": "vue-logo", "percentage": 9.2},
-    { "animation": "fade-left", "name": "React", "iconName": "react-logo", "percentage": 6.5},
-    { "animation": "fade-up", "name": "JavaScript", "iconName": "js-logo", "percentage": 9.8},
-    { "animation": "fade-down", "name": "Node.js", "iconName": "node-logo", "percentage": 8.0},
-    { "animation": "fade-left", "name": "HTML", "iconName": "html-logo", "percentage": 9.0},
-    { "animation": "fade-right", "name": "CSS", "iconName": "css-logo", "percentage": 8.8},
-    { "animation": "fade-left", "name": "GIT", "iconName": "git-logo", "percentage": 9.0},
-    { "animation": "fade-up", "name": "FIGMA", "iconName": "figma-logo", "percentage": 7.5}
+    { "animation": "fade-right", "name": "Vue.js", "iconName": "vue-logo", "percentage": 90},
+    { "animation": "fade-left", "name": "React", "iconName": "react-logo", "percentage": 65},
+    { "animation": "fade-up", "name": "JavaScript", "iconName": "js-logo", "percentage": 98},
+    { "animation": "fade-down", "name": "Node.js", "iconName": "node-logo", "percentage": 80},
+    { "animation": "fade-left", "name": "HTML", "iconName": "html-logo", "percentage": 90},
+    { "animation": "fade-right", "name": "CSS", "iconName": "css-logo", "percentage": 88},
+    { "animation": "fade-left", "name": "GIT", "iconName": "git-logo", "percentage": 90},
+    { "animation": "fade-up", "name": "FIGMA", "iconName": "figma-logo", "percentage": 75}
   ]
 }
