@@ -35,6 +35,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import axios from 'axios';
+import { vMaska } from 'maska/vue';
 
 const loading = useState('loading');
 

@@ -1,16 +1,15 @@
 {
   "functions": {
-    "source": ".output/server",
-    "runtime": "nodejs18"
+    "source": ".output/server"
   },
   "hosting": {
-    "public":".output/public",
+    "public": ".output/public",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
     "cleanUrls": true,
-    "rewrites": [{ "source": "**", "function": "server" }]
+    "rewrites": [{ "source": "**", "function": "ssr" }]  
   }
 }

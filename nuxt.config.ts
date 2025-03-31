@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-10',
   devtools: { enabled: false },
-  modules: ['nuxt-icons', 'nuxt-aos', '@nuxtjs/seo'],
+  modules: ['nuxt-icons', 'nuxt-aos'],
   css: ['~/assets/css/main.css'],
   components: [
     { path: '~/components/sections', pathPrefix: false },
@@ -45,7 +45,8 @@ export default defineNuxtConfig({
     preset: 'firebase',
     firebase: {
       gen: 2,
-      nodeVersion: '18'
+      nodeVersion: '22',
+			serverFunctionName: "ssr",
     }
   }
 });
