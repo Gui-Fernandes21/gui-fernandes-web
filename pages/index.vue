@@ -1,11 +1,13 @@
 <template>
   <LoadingModal v-if="loading"></LoadingModal>
   <div class="layout">
-    <InfoCard></InfoCard>
-    <TheContent></TheContent>
+    <div class="row">
+      <InfoCard></InfoCard>
+      <TheContent></TheContent>
+    </div>
     <TheNav></TheNav>
   </div>
-  <TheFooter></TheFooter>
+  <!-- <TheFooter></TheFooter> -->
 </template>
 
 <script setup lang="ts">
@@ -14,9 +16,35 @@ const loading = useState('loading');
 
 <style scoped>
 .layout {
+  position: relative;
   display: grid;
-  grid-template-columns: 2fr 4fr 4rem;
+  grid-template-columns: 1fr 4rem;
 
   align-items: start;
+
+  overflow-x: hidden;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 1088px) {
+  .layout {
+    grid-template-rows: 1fr 6rem;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
 }
 </style>

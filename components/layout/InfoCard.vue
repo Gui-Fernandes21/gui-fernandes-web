@@ -166,7 +166,7 @@ svg:hover {
 @media only screen and (max-width: 1088px) {
   .card {
     position: relative;
-    width: 90vw;
+    width: 100%;
     margin: 2rem auto;
   }
 }
@@ -177,6 +177,9 @@ svg:hover {
     flex-direction: column;
     justify-content: space-between;
   }
+  .card-wrapper {
+    width: 100%;
+  }
   .info-section {
     padding: 1.8rem 0;
   }
@@ -184,7 +187,7 @@ svg:hover {
     font-size: 2rem;
   }
   img {
-    width: 50%;
+    width: 80%;
     height: 100%;
   }
 }

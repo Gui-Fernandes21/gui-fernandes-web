@@ -12,7 +12,7 @@
         <nuxt-icon @click="scroll('#experience')" class="icon" name="work" filled></nuxt-icon>
         <nuxt-icon @click="scroll('#education')" class="icon" name="study" filled></nuxt-icon>
         <nuxt-icon @click="scroll('#skills')" class="icon skill" name="skills" filled></nuxt-icon>
-        <nuxt-icon @click="scroll('#projects')" class="icon" name="projects" filled></nuxt-icon>
+        <!-- <nuxt-icon @click="scroll('#projects')" class="icon" name="projects" filled></nuxt-icon> -->
         <nuxt-icon @click="scroll('#contact')" class="icon" name="contact" filled></nuxt-icon>
       </div>
     </section>
@@ -38,10 +38,6 @@ const { scroll } = useScroll();
 .nav {
   position: sticky;
   top: 15%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   height: fit-content;
 }
@@ -76,7 +72,9 @@ const { scroll } = useScroll();
   overflow: hidden;
   padding: 31px 0;
   border-radius: 33px;
-  border: .5px solid var(--gray-700);
+  border: 0.5px solid var(--gray-700);
+  background: rgba(10, 10, 10, 0.091);
+  backdrop-filter: blur(10px);
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +88,7 @@ const { scroll } = useScroll();
   transition: all 200ms ease-in-out;
 }
 .skill :deep(svg path) {
-	stroke: var(--gray-700);
+  stroke: var(--gray-700);
 }
 .skill:hover :deep(svg path) {
   stroke: var(--primary);
@@ -100,8 +98,24 @@ const { scroll } = useScroll();
 }
 @media only screen and (max-width: 1088px) {
   .nav-wrapper {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    height: auto;
+
+    padding: 1rem 0;
+
+  }
+  .floating-nav {
+    flex-direction: row;
+    height: 49px;
+    width: 90vw;
+    justify-content: space-evenly;
+  }
+  .nav {
+    top: 90%;
+    bottom: 0;
   }
 }
 </style>
-~/store/scroll ~/store/modal

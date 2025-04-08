@@ -19,4 +19,9 @@
   margin: 2rem auto;
   width: 94dvh;
 }
+@media only screen and (max-width: 768px) {
+  .content {
+    width: 100%;
+  }
+}
 </style>
