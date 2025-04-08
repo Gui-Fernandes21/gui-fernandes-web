@@ -12,7 +12,8 @@
     </header>
 
     <div class="wrapper">
-      <div class="about-me-prompt" @click="scroll('#about')">
+      <div class="about-me-prompt">
+      <!-- <div class="about-me-prompt" @click="scroll('#about')"> -->
         <h3>About me</h3>
         <div class="arrow-container">
           <div class="left"></div>
@@ -37,7 +38,7 @@
 </template>
 
 <script setup lang="ts">
-const { scroll } = useScroll();
+// const { scroll } = useScroll();
 </script>
 
 <style scoped>

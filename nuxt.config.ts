@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-01-10',
   devtools: { enabled: false },
-  modules: ['nuxt-icons', 'nuxt-aos'],
+  modules: ['nuxt-icons', 'nuxt-aos', 'motion-v/nuxt'],
   css: ['~/assets/css/main.css'],
   components: [
     { path: '~/components/sections', pathPrefix: false },
