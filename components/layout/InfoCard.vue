@@ -80,7 +80,7 @@ img {
   top: 2rem;
   left: 0;
 
-  height: 90dvh;
+  height: 90vh;
   width: 100%;
 
   border-radius: 60px;
