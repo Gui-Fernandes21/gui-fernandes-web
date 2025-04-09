@@ -35,8 +35,7 @@
           </div>
         </div>
         <div class="action">
-          <!-- <Button @click="scroll('#contact')">CONTACT ME</Button> -->
-          <Button>CONTACT ME</Button>
+          <Button @click="scroll('#contact')">CONTACT ME</Button>
         </div>
       </div>
     </div>
@@ -44,7 +43,9 @@
 </template>
 
 <script setup lang="ts">
-// const { scroll } = useScroll();
+import { useScroller } from '~/composables/useScroller';
+
+const { scroll } = useScroller();
 
 function socialBtn(direction: string) {
   if (direction == 'linkedin') {
