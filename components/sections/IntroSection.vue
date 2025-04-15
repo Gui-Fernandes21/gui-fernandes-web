@@ -1,21 +1,21 @@
 <template>
-  <section id="intro" data-aos="fade-left" data-aos-delay="600">
+  <section id="intro">
     <SectionToast>
       <nuxt-icon class="icon" name="house" filled></nuxt-icon>
       <span class="body-text bold">Intro</span>
     </SectionToast>
 
-    <header>
+    <motion.header :initial="{ transform: ' translateX(100px) ', opacity: 0 }" :in-view="{ transform: 'translateX(0)', opacity: 1 }" :transition="{ ease: 'easeOut', duration: .6 }">
       <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> a <span class="primary-text">Software</span> Developer</h1>
       <!-- <h1 class="heading-1">Welcome to my portfolio</h1> -->
       <span class="body-text"> Software Developer | Clean Code Advocate | Collaborative Professional</span>
-    </header>
+    </motion.header>
 
     <div class="wrapper">
-      <div class="about-me-prompt">
-      <!-- <div class="about-me-prompt" @click="scroll('#about')"> -->
+      <!-- <div class="about-me-prompt"> -->
+      <div class="about-me-prompt" @click="scroll('#about')">
         <h3>About me</h3>
-        <div class="arrow-container">
+        <div class="arrow-container">``
           <div class="left"></div>
           <div class="right"></div>
         </div>
@@ -23,22 +23,50 @@
     </div>
 
     <div class="statistics-wrapper">
-      <div class="statistics">
-        <div class="experience">
-          <h1>4+</h1>
+      <div ref="statistics" class="statistics">
+        <motion.div :initial="{ transform: ' translateX(150px) ', opacity: 0 }" :transition="{ ease: 'easeOut', duration: 1 }" :in-view="{ transform: ' translateX(0) ', opacity: 1 }" class="experience">
+          <h1>{{ expCount }}+</h1>
           <span class="body-text">Years of Experience</span>
-        </div>
-        <div class="projects">
-          <h1>12+</h1>
+        </motion.div>
+        <motion.div :initial="{ transform: ' translateX(150px) ', opacity: 0 }" :transition="{ ease: 'easeOut', duration: 1 }" :in-view="{ transform: ' translateX(0) ', opacity: 1 }" class="projects">
+          <h1>{{ projCount }}+</h1>
           <span class="body-text">Developed Projects</span>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-// const { scroll } = useScroll();
+import { motion, useInView, animate, easeInOut } from 'motion-v';
+const { scroll } = useScroller();
+
+const expCount = ref(0);
+const projCount = ref(0);
+const statistics = ref();
+const expInView = useInView(statistics, { once: false });
+
+watch(expInView, (inView) => {
+  if (inView) {
+    animate(expCount.value, 4, {
+      duration: 1.5,
+      ease: 'easeOut',
+      onUpdate(value) {
+        expCount.value = Math.floor(value);
+      }
+    });
+    animate(projCount.value, 12, {
+      duration: 1.5,
+      ease: 'easeOut',
+      onUpdate(value) {
+        projCount.value = Math.floor(value);
+      }
+    });
+  } else {
+    expCount.value = 0;
+    projCount.value = 0;
+  }
+});
 </script>
 
 <style scoped>
