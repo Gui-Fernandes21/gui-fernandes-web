@@ -1,4 +1,4 @@
-export const useScroll = () => {
+export const useScroller = () => {
 
   function scroll(selector: string) {
     const section = document.querySelector(selector);
