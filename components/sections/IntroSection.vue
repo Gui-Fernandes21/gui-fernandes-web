@@ -12,14 +12,9 @@
     </motion.header>
 
     <div class="wrapper">
-      <!-- <div class="about-me-prompt"> -->
-      <div class="about-me-prompt" @click="downloadCV">
-        <h3>About me</h3>
-        <div class="arrow-container">
-          ``
-          <div class="left"></div>
-          <div class="right"></div>
-        </div>
+      <div class="download-cv" @click="downloadCV">
+        <Icon name="lucide:download" class="download-icon" />
+        <h3>Download my CV</h3>
       </div>
     </div>
 
@@ -86,6 +81,12 @@ const downloadCV = async (): Promise<void> => {
 </script>
 
 <style scoped>
+.download-icon {
+  font-size: 2rem;
+  color: var(--gray-700);
+
+  transition: all 200ms ease-in-out;
+}
 .icon :deep(svg) {
   font-size: 1rem;
 }
@@ -104,59 +105,42 @@ header > span {
   align-items: center;
 }
 .wrapper {
-  margin: 3rem 0;
+  margin: 3rem 1rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-.about-me-prompt {
+.download-cv {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
   border: 1px solid var(--gray-900);
   border-radius: 15px;
-  padding: 1rem 2rem 3.5rem;
+  
+  padding: 1rem 2rem;
+  
   cursor: pointer;
   user-select: none;
   transition: all 200ms ease-in-out;
 }
-.about-me-prompt:hover {
+.download-cv:hover {
   border: 1px solid var(--primary);
 
   h3 {
     color: var(--primary);
   }
 
-  .right,
-  .left {
+  .download-icon {
     background: var(--primary);
   }
 }
-.about-me-prompt > h3 {
+.download-cv > h3 {
   font-family: 'Montserrat', sans-serif;
   color: var(--gray-700);
   text-align: center;
   transition: all 200ms ease-in-out;
-}
-.arrow-container {
-  display: flex;
-  justify-content: space-around;
-}
-.arrow-container > .left,
-.arrow-container > .right {
-  width: 2rem;
-  height: 5px;
-  background: var(--gray-700);
-  position: absolute;
-  border-radius: 33px;
-  margin: auto;
-  transition: all 200ms ease-in-out;
-}
-.left {
-  transform: translateX(-10px) translateY(10px) rotate(45deg);
-}
-.right {
-  transform: translateX(10px) translateY(10px) rotate(-45deg);
 }
 .statistics {
   display: flex;
@@ -185,5 +169,21 @@ header > span {
     width: 55%;
     display: block;
   }
+  .wrapper {
+    justify-content: flex-start;
+    margin: 3rem 0;
+  }
+  .download-cv {
+
+    padding: .5rem 2rem;
+
+    h3 {
+      font-size: 1rem;
+    }
+
+    & > .download-icon {
+      font-size: 1.6rem;
+    }
+  } 
 }
 </style>
