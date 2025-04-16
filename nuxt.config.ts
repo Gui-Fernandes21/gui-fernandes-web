@@ -36,6 +36,7 @@ export default defineNuxtConfig({
     duration: 800,
     easing: 'ease-in-out'
   },
+  ssr: true,
   nitro: {
     preset: 'firebase',
     firebase: {
