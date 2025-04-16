@@ -77,12 +77,12 @@ img {
   height: 100%;
 }
 .card {
-  position: sticky;
-  top: 2rem;
+  position: fixed;
+  top: .5rem;
   left: 0;
 
   height: 90vh;
-  width: 100%;
+  /* width: 100%; */
 
   border-radius: 60px;
   border: 1px solid #363636;
@@ -166,9 +166,11 @@ svg:hover {
 
 @media only screen and (max-width: 1088px) {
   .card {
-    position: relative;
-    width: 100%;
+    /* position: relative; */
+    /* width: 100%; */
+    left: 1rem;
     margin: 2rem auto;
+    height: fit-content;
   }
 }
 
@@ -177,6 +179,7 @@ svg:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: auto;
   }
   .card-wrapper {
     width: 100%;
@@ -193,4 +196,3 @@ svg:hover {
   }
 }
 </style>
-~/store/scroll ~/store/modal

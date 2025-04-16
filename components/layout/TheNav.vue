@@ -36,7 +36,7 @@ const { scroll } = useScroller();
   height: 100%;
 }
 .nav {
-  position: sticky;
+  position: fixed;
   top: 15%;
 
   height: fit-content;

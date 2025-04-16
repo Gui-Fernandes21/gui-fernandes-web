@@ -49,7 +49,7 @@
 					<div class="dot"></div>
 					<header>
 						<h1 class="heading-3 bold">
-							SparkSignals, <span class="italic">USA </span> —
+							SparkSignals, <span class="italic">Brussels </span> —
 							<span class="primary-text italic">Web Developer</span>
 						</h1>
 						<span class="body-text italic">March 2020 - April 2022</span>
@@ -97,7 +97,7 @@ header h1 {
 .content {
 	display: flex;
 	flex-direction: column;
-	width: 100vw;
+	/* width: 100vw; */
 }
 .content p {
 	color: var(--gray-500);

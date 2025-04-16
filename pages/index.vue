@@ -27,7 +27,7 @@ const loading = useState('loading');
 
 .row {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 35% 65%;
   gap: 1rem;
 }
 
@@ -43,6 +43,7 @@ const loading = useState('loading');
 @media only screen and (max-width: 1088px) {
   .layout {
     grid-template-rows: 1fr 6rem;
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding: 0 1rem;
   }
