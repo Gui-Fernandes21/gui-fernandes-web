@@ -1,12 +1,13 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
-import { getAnalytics, logEvent } from 'firebase/analytics';
+import { getAnalytics, isSupported, logEvent } from 'firebase/analytics';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(async (nuxtApp) => {
   const config = useRuntimeConfig();
+  let analytics;
 
   const firebaseConfig = {
     apiKey: config.app.FB_API_KEY,
@@ -20,9 +21,15 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
 
-  app
+  if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
+    const supported = await isSupported();
+
+    if (supported) {
+      analytics = getAnalytics(app);
+    }
+  }
+
   return {
     provide: {
       firebase: {
