@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 import { getAnalytics, isSupported, logEvent } from 'firebase/analytics';
+import { getStorage } from 'firebase/storage';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,6 +23,8 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
 
+  const storage = getStorage(app, "gs://gui-fernandes-web.firebasestorage.app");
+
   if (process.env.NODE_ENV === 'production' && typeof window !== 'undefined') {
     const supported = await isSupported();
 
@@ -35,6 +38,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
       firebase: {
         app,
         logEvent,
+        storage,
         analytics
       }
     }

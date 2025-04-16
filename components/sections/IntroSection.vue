@@ -5,7 +5,7 @@
       <span class="body-text bold">Intro</span>
     </SectionToast>
 
-    <motion.header :initial="{ transform: ' translateX(100px) ', opacity: 0 }" :in-view="{ transform: 'translateX(0)', opacity: 1 }" :transition="{ ease: 'easeOut', duration: .6 }">
+    <motion.header :initial="{ transform: ' translateX(100px) ', opacity: 0 }" :in-view="{ transform: 'translateX(0)', opacity: 1 }" :transition="{ ease: 'easeOut', duration: 0.6 }">
       <h1 class="heading-0">Hello, I am <span class="primary-text">Gui!</span> a <span class="primary-text">Software</span> Developer</h1>
       <!-- <h1 class="heading-1">Welcome to my portfolio</h1> -->
       <span class="body-text"> Software Developer | Clean Code Advocate | Collaborative Professional</span>
@@ -13,9 +13,10 @@
 
     <div class="wrapper">
       <!-- <div class="about-me-prompt"> -->
-      <div class="about-me-prompt" @click="scroll('#about')">
+      <div class="about-me-prompt" @click="downloadCV">
         <h3>About me</h3>
-        <div class="arrow-container">``
+        <div class="arrow-container">
+          ``
           <div class="left"></div>
           <div class="right"></div>
         </div>
@@ -38,15 +39,17 @@
 </template>
 
 <script setup lang="ts">
-import { motion, useInView, animate, easeInOut } from 'motion-v';
-const { scroll } = useScroller();
+import { motion, useInView, animate } from 'motion-v';
+import { ref as firebaseRef, getDownloadURL, getStorage } from 'firebase/storage';
+
+const { $firebase } = useNuxtApp();
 
 const expCount = ref(0);
 const projCount = ref(0);
 const statistics = ref();
 const expInView = useInView(statistics, { once: false });
 
-watch(expInView, (inView) => {
+watch(expInView, (inView): void => {
   if (inView) {
     animate(expCount.value, 4, {
       duration: 1.5,
@@ -67,6 +70,19 @@ watch(expInView, (inView) => {
     projCount.value = 0;
   }
 });
+
+const downloadCV = async (): Promise<void> => {
+  if (typeof window == undefined) return;
+  const { storage } = $firebase;
+  const cvRef = firebaseRef(storage, '/v1.0_cv-guifernandes-full-stack.pdf');
+  try {
+    const url = await getDownloadURL(cvRef);
+
+    window.open(url, '_blank');
+  } catch (err) {
+    console.error(err);
+  }
+};
 </script>
 
 <style scoped>

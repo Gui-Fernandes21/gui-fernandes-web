@@ -6,7 +6,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "deploy": "npm run build --preset=firebase && npx firebase-tools deploy --project gui-fernandes-web",
+    "deploy": "pnpm build && npx firebase-tools deploy --project gui-fernandes-web",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
