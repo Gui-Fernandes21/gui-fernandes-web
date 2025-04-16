@@ -176,13 +176,19 @@ svg:hover {
 
 @media only screen and (max-width: 600px) {
   .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: auto;
+    margin: 0;
+    width: 90%;
+    left: 0;
   }
   .card-wrapper {
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
   }
   .info-section {
     padding: 1.8rem 0;

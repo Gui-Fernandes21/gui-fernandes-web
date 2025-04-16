@@ -18,9 +18,11 @@
   justify-content: flex-start;
   margin: 2rem 1rem;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .content {
     width: 100%;
+    padding: 0 1rem;
+    margin: 0;
   }
 }
 </style>

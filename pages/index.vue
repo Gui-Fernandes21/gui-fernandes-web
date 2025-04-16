@@ -31,7 +31,7 @@ const loading = useState('loading');
   gap: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .layout {
     grid-template-columns: 1fr;
   }
@@ -45,7 +45,6 @@ const loading = useState('loading');
     grid-template-rows: 1fr 6rem;
     grid-template-columns: 1fr;
     gap: 1rem;
-    padding: 0 1rem;
   }
 }
 </style>

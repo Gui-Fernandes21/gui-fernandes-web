@@ -41,7 +41,7 @@
 .about-wrapper {
 	text-align: center;
 	width: 80%;
-	margin: auto;
+	/* margin: auto; */
 }
 .about-wrapper h1 {
 	margin: 1rem 0;
@@ -52,7 +52,7 @@
 }
 @media only screen and (max-width: 680px) {
 	.about-wrapper {
-		width: 90vw;
+		width: 100%;
 	}
 }
 </style>

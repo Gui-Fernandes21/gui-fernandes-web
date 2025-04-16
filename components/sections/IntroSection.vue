@@ -163,7 +163,7 @@ header > span {
 @media only screen and (max-width: 680px) {
   #intro {
     width: 90vw;
-    margin: auto;
+    /* margin: auto; */
   }
   header > span {
     width: 55%;
