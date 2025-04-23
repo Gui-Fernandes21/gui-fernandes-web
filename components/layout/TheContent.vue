@@ -5,7 +5,7 @@
     <ExperienceSection></ExperienceSection>
     <EducationSection></EducationSection>
     <SkillsSection></SkillsSection>
-    <!-- <ProjectsSection></ProjectsSection> -->
+    <ProjectsSection></ProjectsSection>
     <ContactSection></ContactSection>
   </div>
 </template>
@@ -22,7 +22,7 @@
   .content {
     width: 100%;
     padding: 0 1rem;
-    margin: 0;
+    margin: 0;  
   }
 }
 </style>

@@ -12,7 +12,7 @@
         <nuxt-icon @click="scroll('#experience')" class="icon" name="work" filled></nuxt-icon>
         <nuxt-icon @click="scroll('#education')" class="icon" name="study" filled></nuxt-icon>
         <nuxt-icon @click="scroll('#skills')" class="icon skill" name="skills" filled></nuxt-icon>
-        <!-- <nuxt-icon @click="scroll('#projects')" class="icon" name="projects" filled></nuxt-icon> -->
+        <nuxt-icon @click="scroll('#projects')" class="icon" name="projects" filled></nuxt-icon>
         <nuxt-icon @click="scroll('#contact')" class="icon" name="contact" filled></nuxt-icon>
       </div>
     </section>

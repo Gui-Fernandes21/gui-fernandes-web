@@ -25,7 +25,21 @@
 		</SectionToast>
 
     <div class="content-wrapper">
-      
+      <div class="content">
+				<div class="carousel-container">
+					<div class="card">
+						<img src="/public/images/iconbjj-1.png" alt="IconBjj Website">
+						<p class="description">what was the project about</p>
+					</div>
+				</div>
+			</div>
     </div>
 	</div>
 </template>
+
+<style scoped>
+.card {
+	border-radius: 2rem;
+	overflow: hidden;
+}
+</style>
