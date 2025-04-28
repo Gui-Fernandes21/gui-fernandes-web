@@ -27,19 +27,154 @@
     <div class="content-wrapper">
       <div class="content">
 				<div class="carousel-container">
-					<div class="card">
-						<img src="/public/images/iconbjj-1.png" alt="IconBjj Website">
-						<p class="description">what was the project about</p>
-					</div>
+					<ClientOnly>
+					<Splide :options="{ perPage: 3, gap: '1rem', autoplay: true, pagination: true, breakpoints: { 768: { perPage: 1 }, 1024: { perPage: 2 } } }" class="splide">
+						<SplideSlide v-for="project in data" class="slide">
+							<div class="card" >
+								<img :src="project.imageURL" :alt="project.title">
+								<div class="description">
+									<h1 class="primary-text">{{ project.title }}</h1>
+									<p class="body-text">{{ project.summary }}</p>
+									<div class="tags">
+										<div class="tag_item" v-for="tech in project.technologies">{{ tech }}</div>
+									</div>
+								</div>
+								<div class="backdrop"></div>
+							</div>
+						</SplideSlide>
+					</Splide>
+				</ClientOnly>
 				</div>
 			</div>
     </div>
 	</div>
 </template>
 
+<script setup lang="ts">
+// @ts-ignore
+import { Splide, SplideSlide } from '@splidejs/vue-splide';
+import '@splidejs/vue-splide/css';
+
+const data = ref([
+	{ 
+		title: "Icon BJJ Website",
+		imageURL: "/images/iconbjj-2.png",
+		summary: "A fully responsive Vue.js website for a Brussels-based BJJ academy, featuring SEO-optimized content, fast load times, and secure Firebase Hosting for seamless student engagement.",
+		technologies: ["Vue.Js","SEO","Firebase"]
+	},
+	{ 
+		title: "Habit Tracker App",
+		imageURL: "/images/dashboard-htk.png",
+		summary: "A full-stack habit tracker built as university coursework, featuring a Nuxt 3 frontend, an Express/Node.js REST API, and MongoDB for data persistence. Users can sign up, log habits, set reminders, and view progress analytics in a responsive, performant interface.",
+		technologies: ["Nuxt 3","NodeJs","MongoDB"]
+	},
+	{ 
+		title: "Menutz App",
+		imageURL: "/images/menutz-landing.png",
+		summary: "A full-stack habit tracker built as university coursework, featuring a Nuxt 3 frontend, an Express/Node.js REST API, and MongoDB for data persistence. Users can sign up, log habits, set reminders, and view progress analytics in a responsive, performant interface.",
+		technologies: ["Nuxt 3","NodeJs","MongoDB"]
+	}
+	 
+])
+</script>
+
 <style scoped>
 .card {
-	border-radius: 2rem;
+	position: relative;
+
+	border-radius: 1rem;
 	overflow: hidden;
+
+	transition: all 250ms ease-in-out;
+
+	height: 28rem;
+	width: 100%;
+
+	/* ----------------------------------------- */
+	/* TODO When Project detail modal is ready */
+	/* cursor: pointer; */
+	/* ----------------------------------------- */
+
+	img, .description, .backdrop {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		z-index: 0;
+		filter: saturate(0);
+		transition: all 250ms ease-in-out;
+	}
 }
+
+.content,
+.splide {
+	width: 100%;
+}
+
+/* .slide {
+	width: 18rem;
+
+} */
+
+.tags {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+	gap: 5px;
+
+	.tag_item {
+		color: var(--gray-300);
+		font-size: 12px;
+		padding: 5px 15px;
+		border-radius: 1rem;
+		background: var(--gray-900);
+	}
+}
+
+.card:hover {
+	transform: scale(1.01);
+
+	img {
+		filter: none;
+	}
+}
+
+.description {
+	z-index: 10;
+	top: 50% !important;
+
+	display: grid;
+	grid-template-rows: 25% 50% 20%;
+
+	padding: 0 1rem;
+	width: 100%;
+	height: 50%;	
+}
+
+h1 {
+	font-family: 'Bebas Neue', sans-serif;
+	margin: 0;
+}
+
+p {
+	color: #fff;
+}
+
+.backdrop {
+	background: #00000056;
+	z-index: 5;
+	width: 100%;
+	height: 100%;
+}
+
+.carousel-container {
+	display: flex;
+	gap: 1rem;
+}
+
 </style>

@@ -104,7 +104,8 @@ img {
   line-height: normal;
 }
 .img-wrapper {
-  text-align: center;
+  display: grid;
+  place-items: center;
 }
 .info-section {
   text-align: center;
@@ -166,8 +167,6 @@ svg:hover {
 
 @media only screen and (max-width: 1088px) {
   .card {
-    /* position: relative; */
-    /* width: 100%; */
     left: 1rem;
     margin: 2rem auto;
     height: fit-content;

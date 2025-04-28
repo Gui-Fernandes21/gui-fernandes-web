@@ -20,7 +20,7 @@
 			<h1 class="heading-1">
 				Nice to meet <span class="primary-text">you!</span>
 			</h1>
-			<p class="body-text">
+			<p class="body-text center">
 				I have started my <span class="primary-text">professional </span>Web
 				Development journey <span class="primary-text">5 years</span> ago. Since
 				then, I have worked remotely for companies in
@@ -41,7 +41,7 @@
 .about-wrapper {
 	text-align: center;
 	width: 80%;
-	/* margin: auto; */
+	margin: auto;
 }
 .about-wrapper h1 {
 	margin: 1rem 0;

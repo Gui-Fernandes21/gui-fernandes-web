@@ -35,7 +35,7 @@ const loading = useState('loading');
 
 .row {
   display: grid;
-  grid-template-columns: 35% 65%;
+  grid-template-columns: 30% 70%;
   gap: 1rem;
 }
 
@@ -44,7 +44,7 @@ const loading = useState('loading');
     grid-template-columns: 1fr;
   }
   .row {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
@@ -53,6 +53,9 @@ const loading = useState('loading');
     grid-template-rows: 1fr 6rem;
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+  .row {
+    grid-template-columns: 35% 65%;
   }
 }
 </style>

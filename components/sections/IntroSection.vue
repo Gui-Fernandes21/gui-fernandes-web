@@ -68,7 +68,16 @@ watch(expInView, (inView): void => {
 
 const downloadCV = async (): Promise<void> => {
   if (typeof window == undefined) return;
-  const { storage } = $firebase;
+  const { storage, analytics, logEvent } = $firebase;
+
+  if (analytics !== undefined) {
+    logEvent(analytics, "cv-download", {
+      page_location: window.location.href,
+      page_title: document.title,
+      timestamp: Date.now()
+    })
+  }
+
   const cvRef = firebaseRef(storage, '/v1.0_cv-guifernandes-full-stack.pdf');
   try {
     const url = await getDownloadURL(cvRef);

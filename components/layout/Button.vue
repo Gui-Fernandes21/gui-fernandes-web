@@ -40,6 +40,16 @@ export default {
 	transition: all 100ms ease-in-out;
 }
 
+.button-content {
+	padding: 1rem 0;
+}
+
+p {
+	display: flex;
+	place-items: center;
+	gap: 5px;
+}
+
 .filled {
 	background: var(--primary);
 }
