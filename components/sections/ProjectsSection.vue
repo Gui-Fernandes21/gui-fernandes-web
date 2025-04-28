@@ -66,13 +66,13 @@ const data = ref([
 		title: "Habit Tracker App",
 		imageURL: "/images/dashboard-htk.png",
 		summary: "A full-stack habit tracker built as university coursework, featuring a Nuxt 3 frontend, an Express/Node.js REST API, and MongoDB for data persistence. Users can sign up, log habits, set reminders, and view progress analytics in a responsive, performant interface.",
-		technologies: ["Nuxt 3","NodeJs","MongoDB"]
+		technologies: ["Nuxt","NodeJs","MongoDB"]
 	},
 	{ 
 		title: "Menutz App",
 		imageURL: "/images/menutz-landing.png",
-		summary: "A full-stack habit tracker built as university coursework, featuring a Nuxt 3 frontend, an Express/Node.js REST API, and MongoDB for data persistence. Users can sign up, log habits, set reminders, and view progress analytics in a responsive, performant interface.",
-		technologies: ["Nuxt 3","NodeJs","MongoDB"]
+		summary: "A digital menu platform for restaurants, featuring a Nuxt 3 website optimized for SEO and hosted on Firebase, alongside a cross-platform Flutter mobile app that lets customers browse and engage with menus seamlessly.",
+		technologies: ["Nuxt","Flutter","TypeScript"]
 	}
 	 
 ])
