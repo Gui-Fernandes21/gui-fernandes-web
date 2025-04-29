@@ -25,7 +25,7 @@
 							University of London, <span class="italic">UK</span> —
 							<span class="primary-text italic">BSc Computer Science</span>
 						</h1>
-						<span class="body-text">April 2026 - 3.5 GPA (Current)</span>
+						<span class="body-text italic">April 2026 - 3.5 GPA (Current)</span>
 					</header>
 					<div class="courses">
 						<h4 class="heading-4">Courses:</h4>
@@ -71,7 +71,7 @@
 							Instituto Metropole Digital, <span class="italic">Brazil</span> —
 							<span class="primary-text italic">Web Developer Bootcamp</span>
 						</h1>
-						<!-- <span class="body-text italic">January 2020 - July 2020</span> -->
+						<span class="body-text italic">January 2020 - July 2020</span>
 					</header>
 					<p class="body-text">- Structured Programming.</p>
 					<p class="body-text">- Object-Oriented Programming.</p>
