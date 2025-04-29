@@ -11,70 +11,61 @@
         <!-- <h4 class="heading-4">GuiFernandesPro@gmail.com</h4> -->
       </header>
 
-      <form @submit.prevent class="form-grid">
+      <Form @submit="onSubmit" class="form-grid" :validation-schema="contactSchema" v-slot="{ values, errors, meta }">
         <div class="form-control input full-width">
-          <input placeholder="Full Name" name="name" v-model="name" type="text" />
+          <ErrorMessage name="name" />
+          <Field :style="errors.name ? 'border-bottom: 1px solid red' : null" placeholder="Full Name" name="name" type="text" />
         </div>
         <div class="form-control">
-          <input placeholder="Phone" v-maska="'+1 (###) ###-####'" name="phone" v-model="phone" type="tel" />
+          <ErrorMessage name="phone" />
+          <Field :style="errors.phone ? 'border-bottom: 1px solid red' : null" placeholder="Phone" v-maska="'+1 (###) ###-####'" name="phone" type="tel" />
         </div>
         <div class="form-control">
-          <input placeholder="Email" name="email" v-model="email" type="email" />
+          <ErrorMessage name="email" />
+          <Field :style="errors.email ? 'border-bottom: 1px solid red' : null" placeholder="Email" name="email" type="email" />
         </div>
         <div class="form-control full-width">
-          <textarea placeholder="Message" name="message" v-model="message"></textarea>
+          <ErrorMessage name="message" />
+          <Field :style="errors.message ? 'border-bottom: 1px solid red' : null" as="textarea" placeholder="Message" name="message"></Field>
         </div>
-      </form>
-      <div class="row action">
-        <button class="body-text" @click="sendMail" type="submit">Send Message</button>
-      </div>
+
+        <div class="row action full-width">
+          <button class="body-text full-width" type="submit">Send Email</button>
+        </div>
+      </Form>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import axios from 'axios';
+import type { SubmissionHandler, FormActions, GenericObject } from 'vee-validate'
+
 import { vMaska } from 'maska/vue';
+import { Form, Field, ErrorMessage } from 'vee-validate';
+import { contactSchema } from '~/schemas/contactForm';
+import axios from 'axios';
 
 const loading = useState('loading');
 
-const name = ref('');
-const email = ref('');
-const phone = ref('');
-const message = ref('');
-const subject = ref('');
-
-function sendMail() {
+const onSubmit: SubmissionHandler<GenericObject> = (values, actions: FormActions<GenericObject>) => {
   loading.value = true;
+  
   axios
-    .post('https://formspree.io/f/mayryokq', {
-      message: message.value,
-      name: name.value,
-      phone: phone.value,
-      email: email.value,
-      subject: subject.value
-    })
+    .post('https://formspree.io/f/mayryokq', {...values})
     .then((result) => {
       console.log(result);
-      if (result.status == 200) {
-        clearFields();
-        loading.value = false;
-      } else {
+      if (result.status !== 200) {
         throw new Error('Back end problem');
       }
     })
     .catch((err) => {
-      loading.value = false;
       console.log(err);
+    })
+    .finally(() => {
+      actions.resetForm();
+      loading.value = false;
     });
-}
-function clearFields() {
-  name.value = '';
-  email.value = '';
-  phone.value = '';
-  message.value = '';
-}
+};
 </script>
 
 <style scoped>
@@ -110,6 +101,10 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.form-control > span {
+  color: #ff3e3ee6;
+  font-size: 9px;
 }
 .form-control > textarea {
   min-height: 150px;
@@ -170,6 +165,16 @@ form {
   }
 }
 
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
 @media only screen and (max-width: 680px) {
   .form-grid {
     display: flex !important;
@@ -179,16 +184,6 @@ form {
   .form-control {
     width: 100%;
   }
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.form-control.full-width {
-  grid-column: span 2;
 }
 
 @media (min-width: 768px) {

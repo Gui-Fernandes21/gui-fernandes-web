@@ -1,10 +1,6 @@
 <template>
   <div class="wrapper">
-    <div class="card">
-      <span class="loader"></span>
-      <p class="body-text">Loading...</p>
-      <!-- <span class="body-text bold close" @click="closeModal">+</span> -->
-    </div>
+    <div class="loader"></div>
   </div>
 </template>
 
@@ -27,82 +23,29 @@
 
   user-select: none;
 }
-
-.card {
-  position: relative;
-  width: 15rem;
-  height: 15rem;
-
-  background-color: var(--gray-100);
-  border-radius: 10px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-
-  p {
-    color: var(--gray-900);
-    font-weight: bold;
-  }
-}
-
-.close {
-  position: absolute;
-  top: 2%;
-  right: 7%;
-
-  font-size: 24px;
-  cursor: pointer;
-
-  transform: rotate(45deg);
-}
-
 .loader {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%;
-  display: inline-block;
-  position: relative;
-  border: 3px solid;
-  border-color: #fff #fff transparent;
-  box-sizing: border-box;
-  animation: rotation 1s linear infinite;
+  height: 80px;
+  aspect-ratio: 1;
+  display: grid;
 }
-.loader::after {
-  content: '';
-  box-sizing: border-box;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  border: 3px solid;
-  border-color: transparent var(--primary) var(--primary);
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  animation: rotationBack 0.5s linear infinite;
-  transform-origin: center center;
+.loader:before,
+.loader:after {
+  content: "";
+  --c:no-repeat linear-gradient(var(--primary) 0 0);
+  background: var(--c), var(--c);
+  background-size: 25% 50%;
+  animation: l5 1.3s infinite linear;
 }
-
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.loader:after {
+  transform: scale(-1);
 }
-
-@keyframes rotationBack {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
+@keyframes l5 {
+  0%,
+  5%   {background-position:33.4% 100%,66.6% 100%}
+  25%  {background-position:33.4% 100%,100% 0}
+  50%  {background-position:0 0,100% 0}
+  75%  {background-position:0 0,66.6% 100%}
+  95%,
+  100% {background-position:33.4% 100%,66.6% 100%}
+} 
 </style>

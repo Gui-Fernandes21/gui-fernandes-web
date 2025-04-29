@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 2rem 1rem;
+  margin: 2rem 1.2rem;
 }
 @media only screen and (max-width: 600px) {
   .content {

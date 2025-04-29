@@ -54,6 +54,7 @@
 // @ts-ignore
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/vue-splide/css';
+// import '@splidejs/splide/css/skyblue';
 
 const data = ref([
 	{ 
@@ -79,6 +80,13 @@ const data = ref([
 </script>
 
 <style scoped>
+::v-deep(.splide__pagination__page.is-active) {
+	background: var(--primary);
+}
+
+::v-deep(.splide__arrow svg) {
+	fill: var(--primary-light) !important;
+}
 .card {
 	position: relative;
 
@@ -114,11 +122,6 @@ const data = ref([
 .splide {
 	width: 100%;
 }
-
-/* .slide {
-	width: 18rem;
-
-} */
 
 .tags {
 	display: flex;

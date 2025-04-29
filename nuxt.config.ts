@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: ['nuxt-icons', 'nuxt-aos', 'motion-v/nuxt', '@nuxt/fonts', '@nuxt/ui'],
   css: ['~/assets/css/main.css'],
+  plugins: ['~/plugins/validation.ts'],
   components: [
     { path: '~/components/sections', pathPrefix: false },
     { path: '~/components/layout', pathPrefix: false },
