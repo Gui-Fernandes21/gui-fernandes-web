@@ -1,27 +1,16 @@
 <template>
-	<NuxtPage />
+  <NuxtPage />
 </template>
 
-<script setup lang="ts">
-useState("loading", () => false);
-</script>
-
 <style>
-@import "normalize.css";
+@import 'normalize.css';
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 html {
-	background: var(--dark);
-	scroll-behavior: smooth;
-	scroll-padding-top: 5rem;
-	overflow-x: hidden;
-}
-.nuxt-icon svg {
-	font-size: 1.3rem;
-	margin-bottom: 0;
-	vertical-align: middle;
+  background: var(--paper);
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+  overflow-x: hidden;
 }
 </style>
-
-~/store/scroll ~/store/modal

@@ -1,6 +1,31 @@
-# Nuxt 3 Minimal Starter
+# Gui Fernandes · Portfolio
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio built with Nuxt 3. Single page, server-rendered, deployed to Firebase.
+
+## Project structure
+
+```
+components/
+  layout/      TheHeader, MobileMenu
+  sections/    One folder per page section (hero, specialism, lab, featured, work, experience, toolkit, contact)
+  ui/          Small reusable pieces: PillButton, SectionLabel, TagChip, TbdTag, InfoText
+  _legacy/     Previous design. Not registered or used.
+composables/   useTicker, useActiveSection, useCvDownload, useScroller
+data/          All page content (text, links, projects, experience). Edit here, not in components.
+types/         Content types (portfolio.ts)
+utils/         tbd() helper, allocation demo maths, ml/ (the three ML lab algorithms)
+```
+
+## Editing content and the yellow TBD tags
+
+All copy lives in `data/*.ts`. Anything that still needs checking is wrapped in `tbd()`:
+
+```ts
+year: tbd('2026') // renders with a yellow "to be confirmed" tag
+year: '2026' // renders as normal text
+```
+
+To find everything left to confirm, search the project for `tbd(`. Work rows without an `href` also show an "add link" tag.
 
 ## Setup
 

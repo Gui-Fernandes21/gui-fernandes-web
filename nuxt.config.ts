@@ -8,7 +8,7 @@ export default defineNuxtConfig({
   components: [
     { path: '~/components/sections', pathPrefix: false },
     { path: '~/components/layout', pathPrefix: false },
-    { path: '~/components/modal', pathPrefix: false }
+    { path: '~/components/ui', pathPrefix: false }
   ],
   runtimeConfig: {
     app: {
@@ -26,16 +26,22 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: 'Gui Web Dev',
-      meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { charset: 'utf-8' }, { name: 'description', content: '' }],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      ]
+      title: 'Gui Fernandes · Software Engineer, AI & Machine Learning',
+      meta: [{ charset: 'utf-8' }, { name: 'viewport', content: 'width=device-width, initial-scale=1' }, { charset: 'utf-8' }, { name: 'description', content: 'Software engineer specialising in AI & Machine Learning.' }],
+      link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
     }
   },
   aos: {
-    duration: 800,
-    easing: 'ease-in-out'
+    duration: 900,
+    easing: 'ease-out-cubic',
+    once: true,
+    offset: 60
+  },
+  vite: {
+    // aos ships as CommonJS and pnpm doesn't hoist it, so pre-bundle it through nuxt-aos for dev
+    optimizeDeps: {
+      include: ['nuxt-aos > aos']
+    }
   },
   ssr: true,
   nitro: {
