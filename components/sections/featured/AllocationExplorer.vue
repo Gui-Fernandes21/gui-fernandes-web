@@ -18,12 +18,12 @@
       </p>
     </div>
 
-    <p class="disclaimer">Illustrative UI concept using broad asset classes. Not the project's model output and not financial advice.</p>
+    <p class="disclaimer">Same seven ETFs as the project, but these weights are an illustrative blend, not the trained agents' output. Not financial advice.</p>
   </div>
 </template>
 
 <script setup lang="ts">
-import { DONUT_RADIUS, allocationFor, assetClasses, riskProfile } from '~/utils/allocation';
+import { DONUT_RADIUS, allocationFor, etfs, riskProfile } from '~/utils/allocation';
 
 const CIRCUMFERENCE = 2 * Math.PI * DONUT_RADIUS;
 
@@ -35,9 +35,9 @@ const segments = computed(() => {
 
   return allocationFor(risk.value).map((percent, i) => {
     const length = (CIRCUMFERENCE * percent) / 100;
-    const style = { stroke: assetClasses[i].color, strokeDasharray: `${Math.max(length - 2, 0)} ${CIRCUMFERENCE}`, strokeDashoffset: -offset };
+    const style = { stroke: etfs[i].color, strokeDasharray: `${Math.max(length - 2, 0)} ${CIRCUMFERENCE}`, strokeDashoffset: -offset };
     offset += length;
-    return { ...assetClasses[i], percent, style };
+    return { ...etfs[i], percent, style };
   });
 });
 </script>

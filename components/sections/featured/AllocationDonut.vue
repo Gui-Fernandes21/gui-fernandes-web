@@ -3,7 +3,7 @@
     <div class="donut">
       <svg viewBox="0 0 180 180" width="180" height="180">
         <circle cx="90" cy="90" :r="DONUT_RADIUS" class="track" />
-        <circle v-for="seg in segments" :key="seg.label" cx="90" cy="90" :r="DONUT_RADIUS" class="seg" :style="seg.style" />
+        <circle v-for="seg in segments" :key="seg.ticker" cx="90" cy="90" :r="DONUT_RADIUS" class="seg" :style="seg.style" />
       </svg>
       <div class="center">
         <b class="serif">{{ label }}</b>
@@ -12,9 +12,12 @@
     </div>
 
     <ul class="legend">
-      <li v-for="seg in segments" :key="seg.label">
+      <li v-for="seg in segments" :key="seg.ticker">
         <i :style="{ background: seg.color }"></i>
-        {{ seg.label }}
+        <span class="name">
+          <strong>{{ seg.ticker }}</strong>
+          {{ seg.name }}
+        </span>
         <b>{{ seg.percent }}%</b>
         <span class="bar"><span :style="{ width: `${seg.percent}%`, background: seg.color }"></span></span>
       </li>
@@ -27,7 +30,7 @@ import { DONUT_RADIUS } from '~/utils/allocation';
 
 defineProps<{
   label: string;
-  segments: { label: string; color: string; percent: number; style: Record<string, string | number> }[];
+  segments: { ticker: string; name: string; color: string; percent: number; style: Record<string, string | number> }[];
 }>();
 </script>
 
@@ -88,7 +91,7 @@ defineProps<{
 
 .legend {
   display: grid;
-  gap: 9px;
+  gap: 6px;
   list-style: none;
 }
 
@@ -98,6 +101,21 @@ defineProps<{
   align-items: center;
   gap: 10px;
   font-size: 13px;
+}
+
+.name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--muted);
+}
+
+.name strong {
+  margin-right: 6px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink);
 }
 
 .legend i {

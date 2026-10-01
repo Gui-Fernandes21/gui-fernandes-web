@@ -20,8 +20,10 @@
   --c1: #0f7a47;
   --c2: #3b6ff5;
   --c3: #8b5cf6;
-  --c4: #e0930b;
-  --c5: #a8a293;
+  --c4: #d99a0b;
+  --c5: #5f6f86;
+  --c6: #14a3a3;
+  --c7: #e4572e;
 
   /* Legacy alias (LoadingModal) */
   --primary: var(--bright);

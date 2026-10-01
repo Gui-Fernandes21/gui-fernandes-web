@@ -10,7 +10,7 @@ export const workItems: WorkItem[] = [
     stack: 'Python · ML',
     kind: 'University',
     href: '#featured',
-    preview: { type: 'terminal', title: 'ETF allocation · risk 5/10', lines: ['US equity      ████████', 'Intl equity    █████', 'Bonds          ███████', 'Real estate    ██', 'Cash           █'] }
+    preview: { type: 'terminal', title: 'ETF allocation · risk 5/10', lines: ['SPY  ██████    23%', 'QQQ  ████      15%', 'IWM  ██         6%', 'EFA  ███       10%', 'EEM  ██         6%', 'GLD  ██         9%', 'TLT  ████████  31%'] }
   },
   {
     title: 'Evolved Creatures',
@@ -32,10 +32,11 @@ export const workItems: WorkItem[] = [
   },
   {
     title: 'Menutz',
-    year: tbd('2024'),
+    year: '2024/2025',
     description: 'Digital menus for restaurants: an SEO-first Nuxt site and a Flutter app for diners.',
     stack: 'Nuxt · Flutter',
     kind: 'Product',
+    href: 'https://menutz.com',
     preview: { type: 'image', src: '/images/menutz-landing.png' }
   },
   {
