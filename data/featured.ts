@@ -30,8 +30,8 @@ export const featuredProject: FeaturedProject = {
     { title: 'Explain & decide', description: 'Trade-offs shown in plain language. The user makes the final call.' }
   ],
   links: [
-    { label: 'Read the case study →', href: tbd('case study link'), primary: true },
-    { label: 'Report (PDF)', href: tbd('report link') },
+    // { label: 'Read the case study →', href: tbd('case study link'), primary: true },
+    // { label: 'Report (PDF)', href: tbd('report link') },
     { label: 'GitHub', href: 'https://github.com/Gui-Fernandes21/portfolio_allocator' }
   ]
 };

@@ -16,7 +16,7 @@ export const toolkit: ToolkitGroup[] = [
   {
     title: 'Education',
     items: [
-      { label: 'BSc Computer Science', sub: 'University of London · AI & ML' },
+      { label: 'BSc Computer Science', sub: 'University of London · AI & ML · 2026' },
       { label: 'Web Dev Bootcamp', sub: 'IMD, Brazil · 2020' }
     ]
   }
