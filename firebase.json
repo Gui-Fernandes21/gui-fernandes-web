@@ -3,13 +3,10 @@
     "source": ".output/server"
   },
   "hosting": {
+    "site": "gui-fernandes-web",
     "public": ".output/public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "cleanUrls": true,
-    "rewrites": [{ "source": "**", "function": "ssr" }]  
+    "rewrites": [{ "source": "**", "function": "ssr" }]
   }
 }
