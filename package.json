@@ -7,6 +7,7 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "deploy": "pnpm build && npx firebase-tools deploy --project gui-fernandes-web",
+    "deploy:update": "npx nuxt build && rm -rf .output/server/node_modules .output/server/package-lock.json && npm --prefix .output/server install && FUNCTIONS_DISCOVERY_TIMEOUT=60 npx firebase-tools@latest deploy",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"

@@ -21,7 +21,7 @@ export const socialLinks = [
 ];
 
 export const stats: Stat[] = [
-  { value: '6+', count: 6, suffix: '+', label: 'years building production software' },
+  { value: '4+', count: 4, suffix: '+', label: 'years building production software' },
   { value: 'BSc', label: 'Computer Science: AI & ML specialism' },
   { value: '3', count: 3, label: 'countries worked with: BR · BE · US' },
   { value: 'EN/PT/FR', label: 'working languages' }

@@ -1,5 +1,4 @@
 import type { ExperienceItem } from '~/types/portfolio';
-import { tbd } from '~/utils/tbd';
 
 export const experience: ExperienceItem[] = [
   {
@@ -18,12 +17,12 @@ export const experience: ExperienceItem[] = [
     badge: 'Health insurance',
     highlights: ["Vue.js interfaces for Unimed, Brazil's largest medical cooperative.", 'Performance optimisation across the app.', 'Worked directly with client stakeholders.']
   },
-  {
-    from: '2020',
-    to: '2022',
-    company: 'SparkSignals',
-    role: 'Web Developer · Brussels',
-    badge: 'Agency',
-    highlights: ['Owned web apps from concept to deploy.', 'Vue front ends and Node/Express APIs with MySQL & MongoDB.']
-  }
+  // {
+  //   from: '2020',
+  //   to: '2022',
+  //   company: 'SparkSignals',
+  //   role: 'Web Developer · Brussels',
+  //   badge: 'Agency',
+  //   highlights: ['Owned web apps from concept to deploy.', 'Vue front ends and Node/Express APIs with MySQL & MongoDB.']
+  // }
 ];
