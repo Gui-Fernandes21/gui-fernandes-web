@@ -9,7 +9,7 @@ export const profile = {
   availability: 'Open to remote roles',
   portrait: '/images/profilesocial-me.jpg',
   email: 'guifernandespro@gmail.com',
-  cvPath: '/v1.0_cv-guifernandes-full-stack.pdf',
+  cvPath: '/Guilherme_Fernandes_CV.pdf',
   degree: 'a BSc in Computer Science',
   specialism: 'specialising in AI & Machine Learning',
   pitch: 'I take ideas from model to product: data, algorithms, APIs, and the interfaces people actually use.'
