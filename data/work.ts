@@ -32,15 +32,15 @@ export const workItems: WorkItem[] = [
     href: 'https://github.com/Gui-Fernandes21/agent-platform-public',
     preview: { type: 'terminal', title: '$ agent run --task "triage PR"', lines: ['✓ memory.recall', '✓ qdrant.search', '✓ neo4j.expand', '✓ evals.promptfoo'] }
   },
-  {
-    title: 'Menutz',
-    year: '2024-25',
-    description: 'Digital menus for restaurants: an SEO-first Nuxt site and a Flutter app for diners.',
-    stack: 'Nuxt · Flutter',
-    kind: 'Product',
-    href: 'https://menutz.com',
-    preview: { type: 'image', src: '/images/menutz-landing.png' }
-  },
+  // {
+  //   title: 'Menutz',
+  //   year: '2024-25',
+  //   description: 'Digital menus for restaurants: an SEO-first Nuxt site and a Flutter app for diners.',
+  //   stack: 'Nuxt · Flutter',
+  //   kind: 'Product',
+  //   href: 'https://menutz.com',
+  //   preview: { type: 'image', src: '/images/menutz-landing.png' }
+  // },
   {
     title: 'Habit Tracker',
     year: '2024',
