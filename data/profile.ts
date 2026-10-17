@@ -4,15 +4,15 @@ import { tbd } from '~/utils/tbd';
 export const profile = {
   firstName: 'Gui',
   lastName: 'Fernandes',
-  role: 'Software engineer · AI & Machine Learning',
+  role: 'AI Engineer · RAG, agents & model evaluation',
   location: 'Orlando, FL, working remotely with teams anywhere',
   availability: 'Open to remote roles',
   portrait: '/images/profilesocial-me.jpg',
   email: 'guifernandespro@gmail.com',
   cvPath: '/Guilherme_Fernandes_CV.pdf',
   degree: 'a BSc in Computer Science',
-  specialism: 'specialising in AI & Machine Learning',
-  pitch: 'I take ideas from model to product: data, algorithms, APIs, and the interfaces people actually use.'
+  specialism: 'specialising in Machine Learning & AI',
+  pitch: 'I build applied AI end to end: RAG, agent-based workflows, prompt engineering, model evaluation and guardrails, deployed to the cloud with CI/CD — plus the APIs and interfaces people actually use.'
 };
 
 export const socialLinks = [
@@ -27,7 +27,7 @@ export const stats: Stat[] = [
   { value: 'EN/PT/FR', label: 'working languages' }
 ];
 
-export const tickerItems = ['Machine Learning', 'Python', 'Reinforcement Learning', 'Evolutionary Algorithms', 'Data Analysis', 'LLM Agents', 'FastAPI', 'Vue & Nuxt', 'PostgreSQL', 'GCP'];
+export const tickerItems = ['Applied AI', 'RAG', 'LLM Agents', 'Prompt Engineering', 'Model Evaluation', 'Guardrails', 'Machine Learning', 'Deep RL (PPO)', 'LangChain', 'Hugging Face', 'Python', 'FastAPI', 'TypeScript', 'Qdrant', 'Neo4j', 'PostgreSQL', 'GCP', 'Docker', 'CI/CD', 'Vue & Nuxt'];
 
 export const navLinks = [
   { label: 'AI & ML', id: 'ai' },
