@@ -15,9 +15,9 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Gui Fernandes · Software Engineer, AI & Machine Learning',
-  description: 'Software engineer with a Computer Science background specialising in AI & Machine Learning. Machine learning, applied AI systems and full-stack products.',
+  description: 'AI & software engineer specialising in Machine Learning. Builds applied AI end to end: RAG, agent workflows, prompt engineering, model evaluation and guardrails, with Python, FastAPI and Vue/Nuxt.',
   ogTitle: 'Gui Fernandes · Software Engineer, AI & Machine Learning',
-  ogDescription: 'Machine learning, applied AI systems and full-stack products, from model to interface.',
+  ogDescription: 'Applied AI end to end: RAG, agent workflows, model evaluation and guardrails, from model to interface.',
   ogImage: '/images/profilesocial-me.jpg',
   twitterCard: 'summary_large_image'
 });

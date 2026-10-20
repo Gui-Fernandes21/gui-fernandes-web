@@ -1,19 +1,20 @@
 import type { SpecialismArea } from '~/types/portfolio';
 
-export const specialismIntro = 'My BSc specialism, and the thread running through my recent work. I like the whole pipeline: framing the problem, getting the data right, choosing the method, and shipping something people can use and trust.';
+export const specialismIntro =
+  "My BSc specialism, and the thread running through my recent work. I like the whole pipeline: framing the problem, getting the data right, choosing the method, and shipping something people can use and trust. Since finishing my degree I've been self-studying Stanford CS231n (deep learning for computer vision).";
 
 export const specialismAreas: SpecialismArea[] = [
   {
     icon: 'chart',
     title: 'Machine learning & data',
-    description: 'Supervised learning, model evaluation and data analysis in Python.',
-    tags: ['Python', 'ML', 'Data analysis']
+    description: 'Supervised learning, model evaluation and data analysis in Python, plus university projects in NLP and OCR.',
+    tags: ['Python', 'ML', 'NLP', 'OCR']
   },
   {
     icon: 'agent',
     title: 'Reinforcement learning',
-    description: 'Q-learning, TD methods, DQN and policy-gradient methods like Proximal Policy Optimization (PPO).',
-    tags: ['Q-learning', 'DQN', 'PPO']
+    description: 'Q-learning, TD methods, DQN and policy-gradient methods like Proximal Policy Optimization (PPO), which powers my final project.',
+    tags: ['Q-learning', 'DQN', 'PPO', 'Deep RL']
   },
   {
     icon: 'dna',
@@ -24,7 +25,7 @@ export const specialismAreas: SpecialismArea[] = [
   {
     icon: 'network',
     title: 'Applied AI systems',
-    description: 'LLM agents with memory and retrieval, evaluation suites, and decision support tools.',
-    tags: ['LLM agents', 'RAG', 'Evals']
+    description: 'RAG, agent-based workflows and orchestration, tool integration, prompt engineering, model evaluation and guardrails.',
+    tags: ['RAG', 'LLM agents', 'Evals', 'Guardrails']
   }
 ];

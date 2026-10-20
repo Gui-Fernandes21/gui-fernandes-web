@@ -4,15 +4,15 @@ import { tbd } from '~/utils/tbd';
 export const profile = {
   firstName: 'Gui',
   lastName: 'Fernandes',
-  role: 'AI Engineer · RAG, agents & model evaluation',
+  role: 'AI & software engineer · Machine Learning',
   location: 'Orlando, FL, working remotely with teams anywhere',
   availability: 'Open to remote roles',
   portrait: '/images/profilesocial-me.jpg',
   email: 'guifernandespro@gmail.com',
   cvPath: '/Guilherme_Fernandes_CV.pdf',
   degree: 'a BSc in Computer Science',
-  specialism: 'specialising in Machine Learning & AI',
-  pitch: 'I build applied AI end to end: RAG, agent-based workflows, prompt engineering, model evaluation and guardrails, deployed to the cloud with CI/CD — plus the APIs and interfaces people actually use.'
+  specialism: 'specialising in AI & Machine Learning',
+  pitch: 'I build applied AI end to end: RAG, agent workflows, prompt engineering, model evaluation and guardrails, shipped to the cloud with CI/CD, plus the APIs and interfaces people actually use.'
 };
 
 export const socialLinks = [
@@ -27,7 +27,25 @@ export const stats: Stat[] = [
   { value: 'EN/PT/FR', label: 'working languages' }
 ];
 
-export const tickerItems = ['Applied AI', 'RAG', 'LLM Agents', 'Prompt Engineering', 'Model Evaluation', 'Guardrails', 'Machine Learning', 'Deep RL (PPO)', 'LangChain', 'Hugging Face', 'Python', 'FastAPI', 'TypeScript', 'Qdrant', 'Neo4j', 'PostgreSQL', 'GCP', 'Docker', 'CI/CD', 'Vue & Nuxt'];
+export const tickerItems = [
+  'RAG',
+  'Agent Workflows',
+  'Prompt Engineering',
+  'Model Evaluation',
+  'Guardrails',
+  'Machine Learning',
+  'Deep RL (PPO)',
+  'NLP',
+  'Python',
+  'FastAPI',
+  'TypeScript',
+  'Vue & Nuxt',
+  'LangChain',
+  'Hugging Face',
+  'GCP',
+  'Docker',
+  'CI/CD'
+];
 
 export const navLinks = [
   { label: 'AI & ML', id: 'ai' },

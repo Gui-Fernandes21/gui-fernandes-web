@@ -25,8 +25,8 @@ import { toolkit } from '~/data/toolkit';
 <style scoped>
 .groups {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
   margin-left: 152px;
 }
 

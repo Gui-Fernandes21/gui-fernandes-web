@@ -27,7 +27,7 @@ export const featuredProject: FeaturedProject = {
     { title: 'Investor profile', description: 'Goals, horizon and risk tolerance become constraints.' },
     { title: 'Market data', description: 'ETF prices and metadata.', note: 'From Yahoo Finance' },
     { title: 'Model', description: 'Generates candidate allocations.', note: 'Proximal Policy Gradient (PPO) with 4 risk-adjusted reward functions' },
-    { title: 'Explain & decide', description: 'Trade-offs shown in plain language. The user makes the final call.' }
+    { title: 'Explain & decide', description: 'A five-agent LLM pipeline explains the trade-offs in plain language, behind a guardrail: a test fails the build if any agent can touch the allocation. The user makes the final call.' }
   ],
   links: [
     // { label: 'Read the case study →', href: tbd('case study link'), primary: true },

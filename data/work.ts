@@ -6,8 +6,8 @@ export const workItems: WorkItem[] = [
     title: 'ETF Allocation DSS',
     badge: 'AI · Final project',
     year: '2026',
-    description: 'Deep RL (PPO) recommends ETF portfolios; walk-forward validation over an 80-run reward ablation. A five-agent LLM pipeline explains results behind a test-enforced guardrail.',
-    stack: 'Python · PPO · FastAPI',
+    description: 'Deep reinforcement learning (PPO) recommends ETF portfolios, tested with an 80-run reward ablation and walk-forward validation. LLM agents explain the results behind a guardrail.',
+    stack: 'Python · PPO · FastAPI · Nuxt',
     kind: 'University',
     href: '#featured',
     preview: { type: 'terminal', title: 'ETF allocation · risk 5/10', lines: ['SPY  ██████    23%', 'QQQ  ████      15%', 'IWM  ██         6%', 'EFA  ███       10%', 'EEM  ██         6%', 'GLD  ██         9%', 'TLT  ████████  31%'] }
@@ -26,8 +26,8 @@ export const workItems: WorkItem[] = [
     title: 'Agent Platform',
     badge: 'AI',
     year: '2025—26',
-    description: 'Self-hosted multi-agent platform: RAG over Qdrant & Neo4j, FastAPI memory API, PromptFoo eval suites, guardrails, and tiered model routing on GCP.',
-    stack: 'Python · FastAPI · GCP',
+    description: '9 LLM agents orchestrated through a gateway, with RAG over Qdrant & Neo4j, tool integrations, guardrails and PromptFoo evals.',
+    stack: 'Python · FastAPI · GCP · Docker',
     kind: 'Personal R&D',
     href: 'https://github.com/Gui-Fernandes21/agent-platform-public',
     preview: { type: 'terminal', title: '$ agent run --task "triage PR"', lines: ['✓ memory.recall', '✓ rag.qdrant+neo4j', '✓ guardrails.approval', '✓ evals.promptfoo'] }
