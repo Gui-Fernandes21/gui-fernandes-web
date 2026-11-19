@@ -19,14 +19,14 @@ export const featuredProject: FeaturedProject = {
   ],
   kpis: [
     { label: 'ETFs', value: '7' },
-    { label: 'years of price data', value: '8yrs' },
-    { label: 'annualised return', value: '6.4%' },
-    { label: 'final mark', value: '82%' }
+    { label: 'years of price data', value: '8' },
+    { label: 'runs won by the risk-aware reward', value: '17/20' },
+    { label: 'final mark (provisional)', value: '82%' }
   ],
   pipeline: [
     { title: 'Investor profile', description: 'Goals, horizon and risk tolerance become constraints.' },
     { title: 'Market data', description: 'ETF prices and metadata.', note: 'From Yahoo Finance' },
-    { title: 'Model', description: 'Generates candidate allocations.', note: 'Proximal Policy Gradient (PPO) with 4 risk-adjusted reward functions' },
+    { title: 'Model', description: 'Generates candidate allocations.', note: 'Proximal Policy Optimization (PPO) with 4 risk-adjusted reward functions' },
     { title: 'Explain & decide', description: 'A five-agent LLM pipeline explains the trade-offs in plain language, behind a guardrail: a test fails the build if any agent can touch the allocation. The user makes the final call.' }
   ],
   links: [

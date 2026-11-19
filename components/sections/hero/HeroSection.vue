@@ -174,21 +174,25 @@ h1 em {
   }
 
   .foot {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns: 1fr auto;
+    gap: 24px 20px;
   }
 
   .intro {
-    grid-column: auto;
+    grid-column: span 2;
+  }
+
+  /* Buttons first, portrait beside them, so the CTAs sit above the fold */
+  .cta {
+    order: 2;
+    align-self: center;
+    justify-self: start;
+    align-items: flex-start;
   }
 
   .portrait {
-    width: 130px;
-  }
-
-  .cta {
-    justify-self: start;
-    align-items: flex-start;
+    order: 3;
+    width: 104px;
   }
 }
 </style>

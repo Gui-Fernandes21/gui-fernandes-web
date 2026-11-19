@@ -11,7 +11,7 @@ export const toolkit: ToolkitGroup[] = [
   },
   {
     title: 'Languages & APIs',
-    items: [{ label: 'Python · SQL' }, { label: 'TypeScript · JavaScript' }, { label: 'FastAPI · Node.js' }, { label: 'RESTful APIs · PostgreSQL' }, { label: 'Vue.js / Nuxt · React' }]
+    items: [{ label: 'Python · SQL' }, { label: 'TypeScript · JavaScript' }, { label: 'FastAPI · Node.js' }, { label: 'RESTful APIs · PostgreSQL' }, { label: 'Vue.js / Nuxt · Angular · React' }]
   },
   {
     title: 'Cloud & DevOps',
@@ -19,7 +19,7 @@ export const toolkit: ToolkitGroup[] = [
   },
   {
     title: 'Practices',
-    items: [{ label: 'Agile / Scrum' }, { label: 'Unit & contract tests' }, { label: 'Jest · Vitest' }, { label: 'Secure coding' }, { label: 'Responsible AI' }]
+    items: [{ label: 'Agile / Scrum' }, { label: 'Unit & contract tests' }, { label: 'Jest · Vitest' }, { label: 'Secure coding' }, { label: 'Accessibility · WCAG 2.1 AA' }, { label: 'Responsible AI' }]
   },
   {
     title: 'Education',

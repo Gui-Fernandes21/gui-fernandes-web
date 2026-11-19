@@ -22,8 +22,9 @@ export const experience: ExperienceItem[] = [
     role: 'Front-End Developer · Unimed',
     badge: 'Health insurance',
     highlights: [
-      "Built Vue.js interfaces for Unimed, Brazil's largest medical cooperative (24M+ members), raising patient portal engagement by 25%.",
+      "Built Angular and Vue.js interfaces for Unimed, Brazil's largest medical cooperative (24M+ members), raising patient portal engagement by 25%.",
       'Created a reusable component library with Vue.js and React, cutting development time for new features by 30%.',
+      'Brought the patient portal to WCAG 2.1 AA accessibility, with faster load times after profiling and fixing memory leaks.',
       'Worked directly with client stakeholders in Agile/Scrum sprints.'
     ]
   },

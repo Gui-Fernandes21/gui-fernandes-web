@@ -32,6 +32,25 @@ export const workItems: WorkItem[] = [
     href: 'https://github.com/Gui-Fernandes21/agent-platform-public',
     preview: { type: 'terminal', title: '$ agent run --task "triage PR"', lines: ['✓ memory.recall', '✓ rag.qdrant+neo4j', '✓ guardrails.approval', '✓ evals.promptfoo'] }
   },
+  {
+    title: 'Email Outreach Agent',
+    badge: 'AI',
+    year: '2026',
+    description: 'Finds the hiring manager for a job I applied to, verifies their work email, researches one hook and drafts the intro in my voice. Nothing sends until I approve it on Telegram.',
+    stack: 'Python · OpenClaw · Gmail API · Hunter.io',
+    kind: 'Personal R&D',
+    href: 'https://github.com/Gui-Fernandes21/agent-platform-public',
+    preview: { type: 'terminal', title: '$ /email <JOB_ID>', lines: ['✓ recipient: hiring manager', '✓ email verified · hunter 9x', '✓ hook: team blog post', '… waiting for "send" on Telegram', '✓ sent Tue 9:02am · follow-up booked'] }
+  },
+  {
+    title: 'Punchly',
+    year: '2025',
+    description: 'Digital loyalty cards for small businesses: customers scan a QR code to collect stamps, owners track rewards and analytics. In pre-launch with a waitlist.',
+    stack: 'Nuxt · TypeScript · Tailwind · Supabase',
+    kind: 'Product',
+    href: 'https://punchly.vercel.app',
+    preview: { type: 'image', src: '/images/punchly.jpg' }
+  },
   // {
   //   title: 'Menutz',
   //   year: '2024-25',
